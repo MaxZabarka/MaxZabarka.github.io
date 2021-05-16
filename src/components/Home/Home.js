@@ -8,6 +8,8 @@ const Home = () => {
 
   useEffect(() => {
     window.addEventListener("resize", resetHeight);
+    resetHeight()
+
   });
 
   useEffect(() => {
