@@ -3,7 +3,7 @@ import "./Title.scss"
 
 const Title = () => {
     return (
-        <div className="Title.scss">
+        <div className="Title">
             <h1>MAX ZABARKA</h1>
         </div>
     );
