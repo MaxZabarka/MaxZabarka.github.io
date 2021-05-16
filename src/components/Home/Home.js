@@ -8,7 +8,8 @@ import ScrollButton from "./ScrollButton/ScrollButton";
 
 
 const Home = () => {
-
+    const inputEl = useRef(null);
+    
   useEffect(() => {
     window.addEventListener("resize", resetHeight);
   });
