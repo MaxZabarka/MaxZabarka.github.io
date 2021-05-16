@@ -3,7 +3,7 @@ import React from 'react';
 const ScrollButton = () => {
     return (
         <div>
-            <button></button>
+            <button><i></i></button>
         </div>
     );
 };
