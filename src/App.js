@@ -1,5 +1,5 @@
 import './App.scss';
-import Title from './components/Title/Title';
+import Title from './components/Home/Title/Title';
 
 function App() {
   return (
