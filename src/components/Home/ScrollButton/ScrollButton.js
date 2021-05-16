@@ -4,7 +4,7 @@ import "./ScrollButton.scss";
 const ScrollButton = () => {
     return (
         <div className="ScrollButton">
-            <button><img src={arrow} alt="scroll"/> S</button>
+            <button><img src={arrow} alt="scroll"/> </button>
         </div>
     );
 };
