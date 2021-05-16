@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Title from './Title/Title';
 import "./Home.scss"
 import ScrollButton from './ScrollButton/ScrollButton';
