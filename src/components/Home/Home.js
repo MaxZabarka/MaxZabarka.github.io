@@ -9,7 +9,7 @@ const Home = () => {
     *  not included in height calculation,
     *  allowing the page to be scrolled even
     *  when the height is 100vh */
-   
+
   const homeElement = useRef(null);
 
   useEffect(() => {
@@ -27,6 +27,7 @@ const Home = () => {
   function resetHeight() {
     homeElement.current.style.height = window.innerHeight+"px";
   }
+  
   return (
     <div ref={homeElement} className="Home">
       <Title />
