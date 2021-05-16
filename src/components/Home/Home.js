@@ -5,7 +5,7 @@ import ScrollButton from "./ScrollButton/ScrollButton";
 
 const Home = () => {
 
-    // Fix unintended feature on mobile where the address bar 
+    // Fix unintended feature on mobile where the address bar is not accounted 
   const homeElement = useRef(null);
 
   useEffect(() => {
