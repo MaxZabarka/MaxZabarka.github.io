@@ -1,6 +1,7 @@
 $backgroundDarkness: 0.2;
 .Home {
-    min-height: -webkit-fill-available    // overflow: hidden;
+    min-height: -webkit-fill-available;
+        // overflow: hidden;
     background: linear-gradient(rgba(0, 0, 0, $backgroundDarkness), rgba(0, 0, 0, $backgroundDarkness)), url("../../assets/background.jpg");
     background-position: center;
     background-repeat: no-repeat;
