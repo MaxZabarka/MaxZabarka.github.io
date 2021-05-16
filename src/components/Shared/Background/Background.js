@@ -6,7 +6,7 @@ const Background = (props) => {
         backgroundImage: props.image
     }
     return (
-        <div styles={{ props.image:`url(${car})` }} className={props.className + " Background"}/>
+        <div styles={{ backgroundImage:`url(${props.image})` }} className={props.className + " Background"}/>
     );
 };
 
