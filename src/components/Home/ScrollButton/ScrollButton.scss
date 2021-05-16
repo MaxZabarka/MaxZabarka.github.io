@@ -7,9 +7,10 @@
         height:5rem;
         border-radius: 50%;
         outline: none;
-        border:1px solid white;
+        border:3px solid white;
         background: transparent;
         img {
+            filter: invert(1);
             width: 50%
         }
     }
