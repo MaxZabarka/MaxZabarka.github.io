@@ -12,12 +12,12 @@ resetHeight();
 const Home = () => {
 
   useEffect(() => {
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener("resize", resetHeight);
   });
 
   useEffect(() => {
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", resetHeight);
     };
   }, []);
 
