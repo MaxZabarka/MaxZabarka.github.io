@@ -23,7 +23,7 @@ const Home = () => {
   }
 
   return (
-    <div className="Home">
+    <div ref={homeElement} className="Home">
       <Title />
       <ScrollButton />
     </div>
