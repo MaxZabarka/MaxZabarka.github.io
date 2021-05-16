@@ -5,7 +5,9 @@ import ScrollButton from "./ScrollButton/ScrollButton";
 
 const Home = () => {
 
-   /* Fix bug on mobile where address bar is not included in */
+   /* Fix bug on mobile where address bar is
+    not included in height calculation, thus
+    allowing the page to be scrolled */
   const homeElement = useRef(null);
 
   useEffect(() => {
