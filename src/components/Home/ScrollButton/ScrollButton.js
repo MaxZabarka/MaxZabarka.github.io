@@ -4,7 +4,7 @@ import arrow from "../../../assets/down-chevron.svg"
 const ScrollButton = () => {
     return (
         <div>
-            <button><img src/></button>
+            <button><img src={arrow}/></button>
         </div>
     );
 };
