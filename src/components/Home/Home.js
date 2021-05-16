@@ -3,9 +3,8 @@ import Title from './Title/Title';
 
 const Home = () => {
     return (
-        <div>
+        <div className="Home">
             <Title/>
-            
         </div>
     );
 };
