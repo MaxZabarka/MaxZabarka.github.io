@@ -20,6 +20,7 @@ const Home = () => {
   }, []);
 
   function resetHeight() {
+      console.log('window.innerHeight :>> ', window.innerHeight);
     // reset the body height to that of the inner browser
     // document.body.style.height = window.innerHeight + "px";
   }
