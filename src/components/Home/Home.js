@@ -19,7 +19,6 @@ const Home = () => {
   function resetHeight() {
     homeElement.current.style.height = window.innerHeight+"px";
   }
-resetHeight()
   return (
     <div ref={homeElement} className="Home">
       <Title />
