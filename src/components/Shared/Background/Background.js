@@ -3,7 +3,7 @@ import "./Background.scss"
 
 const Background = (props) => {
     return (
-        <div className={props.className + " Background"}/>
+        <div style={style} className={props.className + " Background"}/>
     );
 };
 
