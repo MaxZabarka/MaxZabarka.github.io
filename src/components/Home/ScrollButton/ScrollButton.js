@@ -1,6 +1,6 @@
 import React from 'react';
 import arrow from "../../../assets/down-chevron.svg"
-import "./ScrollButton"
+import "./ScrollButton.scss";
 const ScrollButton = () => {
     return (
         <div className="ScrollButton">
