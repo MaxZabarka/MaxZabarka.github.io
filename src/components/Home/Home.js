@@ -12,7 +12,7 @@ resetHeight();
 const Home = () => {
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
   });
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const Home = () => {
     // reset the body height to that of the inner browser
     document.body.style.height = window.innerHeight + "px";
   }
-  
+
   return (
     <div className="Home">
       <Title />
