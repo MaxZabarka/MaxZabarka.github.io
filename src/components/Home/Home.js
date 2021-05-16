@@ -6,8 +6,9 @@ import ScrollButton from "./ScrollButton/ScrollButton";
 const Home = () => {
 
    /* Fix bug on mobile where address bar is
-    not included in height calculation, thus
-    allowing the page to be scrolled */
+    *  not included in height calculation, thus
+    *  allowing the page to be scrolled even
+    *  when the height is 100vh */
   const homeElement = useRef(null);
 
   useEffect(() => {
