@@ -1,10 +1,10 @@
 import React from 'react';
-import "../../../assets/"
+import "../../../assets/down-chevron.svg" as arrow
 
 const ScrollButton = () => {
     return (
         <div>
-            <button><img/></button>
+            <button><img src/></button>
         </div>
     );
 };
