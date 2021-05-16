@@ -1,9 +1,10 @@
 import React from 'react';
+from "../../"
 
 const ScrollButton = () => {
     return (
         <div>
-            <button><img></img></button>
+            <button><img/></button>
         </div>
     );
 };
