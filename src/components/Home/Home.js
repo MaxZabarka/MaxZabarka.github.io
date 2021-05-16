@@ -3,16 +3,13 @@ import Title from "./Title/Title";
 import "./Home.scss";
 import ScrollButton from "./ScrollButton/ScrollButton";
 
-
-
-
 resetHeight();
 
 const Home = () => {
-    function resetHeight() {
-        // reset the body height to that of the inner browser
-        // document.body.style.height = window.innerHeight + "px";
-      }
+  function resetHeight() {
+    // reset the body height to that of the inner browser
+    // document.body.style.height = window.innerHeight + "px";
+  }
   useEffect(() => {
     window.addEventListener("resize", resetHeight);
   });
@@ -22,8 +19,6 @@ const Home = () => {
       window.removeEventListener("resize", resetHeight);
     };
   }, []);
-
-
 
   return (
     <div className="Home">
