@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Title from "./Title/Title";
 import "./Home.scss";
 import ScrollButton from "./ScrollButton/ScrollButton";
