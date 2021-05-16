@@ -22,7 +22,7 @@ const Home = () => {
 
   function resetHeight() {
     // reset the body height to that of the inner browser
-    document.body.style.height = window.innerHeight + "px";
+    // document.body.style.height = window.innerHeight + "px";
   }
 
   return (
