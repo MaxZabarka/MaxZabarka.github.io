@@ -3,7 +3,7 @@ import "./Background.scss"
 
 const Background = (props) => {
     const style = {
-        back
+        backgroundImage: props.image
     }
     return (
         <div style={style} className={props.className + " Background"}/>
