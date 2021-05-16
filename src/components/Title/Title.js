@@ -4,7 +4,7 @@ import "./Title.scss"
 const Title = () => {
     return (
         <div className="Title">
-            <h1>MAX ZABARKA</h1>
+            <h1>Max Zabarka</h1>
         </div>
     );
 };
