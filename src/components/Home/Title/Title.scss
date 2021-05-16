@@ -1,5 +1,8 @@
 .Title {
     height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1 {
         color:#eee;
         margin: 0;
