@@ -13,9 +13,11 @@ window.addEventListener("resize", resetHeight);
 resetHeight();
 
 const Home = () => {
+    
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
+
   useEffect(() => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
