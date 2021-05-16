@@ -5,7 +5,6 @@ import ScrollButton from "./ScrollButton/ScrollButton";
 
 
 
-window.addEventListener("resize", resetHeight);
 
 resetHeight();
 
