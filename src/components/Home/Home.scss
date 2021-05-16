@@ -3,6 +3,7 @@ $backgroundDarkness: 0.5;
     height:100vh;
     overflow: hidden;
     background: linear-gradient(rgba(0, 0, 0, $backgroundDarkness), rgba(0, 0, 0, $backgroundDarkness)), url("../../assets/background.jpg");
+    filter: blur(2px);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
