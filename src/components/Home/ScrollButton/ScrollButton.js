@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../../assets/down-chevron.svg" as arrow
+import arrow from "../../../assets/down-chevron.svg"
 
 const ScrollButton = () => {
     return (
