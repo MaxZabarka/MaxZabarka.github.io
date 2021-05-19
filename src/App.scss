@@ -23,10 +23,57 @@
   src: local("OpenSans-ExtraBold"),
     url(./assets/OpenSans/OpenSans-ExtraBold.ttf) format("truetype");
 }
+html {
+  height:100vh;
+}
+html,
 body {
+  position: relative;
+  height: 100%;
+}
+#root {
+  height: 100%;
+
+}
+body {
+  overflow: hidden;
   font-family: "OpenSans-Regular", Arial, Helvetica, sans-serif;
 }
 * {
   margin: 0;
-  padding:0;
+  padding: 0;
+}
+.App {
+  height:100%;
+}
+.swiper-container {
+  width: 100%;
+  height:100%;
+  // overflow: hidden;
+  // -ms-overflow-style: none;  /* IE and Edge */
+  // scrollbar-width: none;  /* Firefox */
+}
+.swiper-container::-webkit-scrollbar {
+  display: none;
+}
+.swiper-slide {  
+  text-align: center;
+  font-size: 18px;
+  overflow: auto;
+}
+
+.swiper-container-animate {
+  animation: swipeAnimation 2500ms ease-in-out;
+}
+
+@keyframes swipeAnimation {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.7);
+  }
+  0% {
+    transform: scale(1);
+  }
 }
