@@ -1,13 +1,8 @@
 import React from "react";
-
+import "./About.scss"
 const About = () => {
   return (
-    <div className="About" style={{
-        height:"100%",
-        // position:"absolute",
-        top:0,
-        // height: "100vh",
-         backgroundColor: "red" }}>
+    <div className="About">
       <h1>Hello there!</h1>
     </div>
   );

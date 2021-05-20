@@ -14,6 +14,7 @@ import SwiperCore, { EffectCube, Parallax, Mousewheel } from "swiper/core";
 import "./App.scss";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Navbar from "./components/Navigation/NavBar/Navbar";
 
 // install Swiper modules
 SwiperCore.use([EffectCube, Parallax]);
@@ -38,6 +39,7 @@ function App() {
   }, [swiper]);
   return (
     <div className="App">
+      <Navbar/>
       <Swiper
         mousewheel={{forceToAxis:false, releaseOnEdges:true}}
         speed={speed}

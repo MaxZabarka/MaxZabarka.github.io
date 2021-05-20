@@ -1,13 +1,22 @@
-$backgroundDarkness: 0.2;
+$backgroundDarkness: 0.8;
 .Home {
     height:100%;
     width:100%;
-    background: linear-gradient(rgba(0, 0, 0, $backgroundDarkness), rgba(0, 0, 0, $backgroundDarkness)), url("../../assets/background.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background: black;
+    // filter:saturate(0.7);
+    // filter:grayscale(1);
+    //rgba(114,0,154,1)
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(72,0,154,1) 29%, rgba(154,0,148,1) 69%, rgba(114,0,154,1) 83%);
+
+    // background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(114,0,154,1) 100%);
+    background-size: 400% 400%;
+    // background-size: 400% 400%;
+    // background: linear-gradient(rgba(0, 0, 0, $backgroundDarkness), rgba(0, 0, 0, $backgroundDarkness)), url("../../assets/background.jpg");
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     clip-path: inset(50% 50% 50% 50%);
-    animation: 0.7s cubic-bezier(0,.85,.38,.99) 0.5s animateIn forwards;
+    animation: 0.7s cubic-bezier(0,.85,.38,.99) 0.5s animateIn forwards, gradient 15s ease infinite;
 
 }
 @keyframes animateIn {
@@ -18,4 +27,15 @@ $backgroundDarkness: 0.2;
         clip-path: inset(0% 0% 0% 0%);
 
     }
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
