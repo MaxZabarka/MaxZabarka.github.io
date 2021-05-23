@@ -1,15 +1,18 @@
-import React from 'react';
-import "./Navbar.scss"
+import React from "react";
+import "./Navbar.scss";
+import Hamburger from "../Hamburger/Hamburger";
 
 const Navbar = () => {
-    return (
-        <div className="Navbar">
-            <h1 className="name">zabarka</h1>
-            <div className="toggle">
-                <h1>Nav</h1>
-            </div>
-        </div>
-    );
+  return (
+    <div className="Navbar">
+      <div className="nav-item">
+        <h1 className="name">zabarka</h1>
+      </div>
+      {/* <div className="nav-item"> */}
+        <Hamburger />
+      {/* </div> */}
+    </div>
+  );
 };
 
 export default Navbar;

@@ -74,9 +74,9 @@ const Home = (props) => {
   // Code for detecting mobile swipe up
   let initialY = null;
 
-  function resetHeight(sliderContainerElement) {
-    sliderContainerElement.style.height = window.innerHeight + "px";
-  }
+  // function resetHeight(sliderContainerElement) {
+  //   sliderContainerElement.style.height = window.innerHeight + "px";
+  // }
 
   function startTouch(e) {
     initialY = e.touches[0].clientY;

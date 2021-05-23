@@ -1,0 +1,18 @@
+.Caption {
+    color:white;
+    font-family: "OpenSans-Bold";
+    font-size: 3vw;
+    width: 70%;
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    div {
+        h1 {
+            text-align: left;
+            font-weight: bold;
+            font-size: clamp(0px, 12vw, 7rem);
+        }
+    }
+}

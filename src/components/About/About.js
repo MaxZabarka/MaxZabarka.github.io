@@ -1,9 +1,10 @@
 import React from "react";
 import "./About.scss"
+import Caption from "./Caption/Caption";
 const About = () => {
   return (
     <div className="About">
-      <h1>Hello there!</h1>
+      <Caption/>
     </div>
   );
 };

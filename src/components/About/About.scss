@@ -1,0 +1,16 @@
+.About {
+    height:2000px;
+    // background: #360638;
+    // border:3px solid white;
+
+
+}
+::-webkit-scrollbar {
+    width:10px;
+    background:#111;
+  }
+  ::-webkit-scrollbar-thumb {
+    // height:10px;
+    background:white;
+    box-shadow:0 -100vh 0 100vh white;
+  }

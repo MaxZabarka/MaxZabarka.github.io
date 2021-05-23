@@ -1,0 +1,15 @@
+.paint-hover {
+    display: inline-block;
+    color: #eb6242;
+    overflow: hidden;
+    background: linear-gradient(to right, #eb6242, #eb6242 50%, white 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 500ms ease;
+  }
+  .paint-hover:hover {
+    background-position: 0 100%;
+  }

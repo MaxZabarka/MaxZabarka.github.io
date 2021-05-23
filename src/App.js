@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./components/Shared/PaintHover.scss"
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,7 +10,7 @@ import "swiper/components/effect-cube/effect-cube.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
 // import Swiper core and required modules
-import SwiperCore, { EffectCube, Parallax, Mousewheel } from "swiper/core";
+import SwiperCore, { EffectCube, Parallax } from "swiper/core";
 
 import "./App.scss";
 import Home from "./components/Home/Home";
@@ -18,6 +19,11 @@ import Navbar from "./components/Navigation/NavBar/Navbar";
 
 // install Swiper modules
 SwiperCore.use([EffectCube, Parallax]);
+
+//TODO
+//scrollbar progress bar
+//Reset scroll on slide change
+//Create navigation menu (reuse mars project)
 
 const speed = 2500;
 
@@ -41,11 +47,14 @@ function App() {
     <div className="App">
       <Navbar/>
       <Swiper
-        mousewheel={{forceToAxis:false, releaseOnEdges:true}}
+        onSlideChange={() => {
+          for (const slide of document.querySelectorAll(".swiper-slide")) {
+            slide.scrollTo(0,0)
+          }
+        }}
         speed={speed}
         allowTouchMove={false}
         parallax={true}
-        mousewheel={true}
         onSwiper={setSwiper}
         direction={"vertical"}
         cubeEffect={{
@@ -68,11 +77,8 @@ function App() {
             }}
             swiper={swiper}
           />
-          {/* <h1>Test</h1> */}
         </SwiperSlide>
         <SwiperSlide>
-          {/* <h1>Test 2</h1> */}
-
           <About />
         </SwiperSlide>
       </Swiper>

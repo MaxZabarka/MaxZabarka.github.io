@@ -1,4 +1,8 @@
+@import "../../Shared/FadeIn.scss";
+
 .Navbar {
+  opacity: 0;
+  animation: 0.3s linear fadeIn 1.8s forwards;
   color: white;
   position: fixed;
   top: 0;
@@ -12,9 +16,8 @@
 
     }
 
-  .name,
-  .toggle {
-    
-    margin: clamp(0px, 5vw, 2.5rem);
+  .nav-item {
+    cursor: pointer;
+    margin: clamp(0px, 10%, 2.5rem);
   }
 }
