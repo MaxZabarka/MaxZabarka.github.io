@@ -6,11 +6,11 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <div className="nav-item">
-        <h1 className="name">zabarka</h1>
+        <h1 className="name paint-hover">zabarka</h1>
       </div>
-      {/* <div className="nav-item"> */}
+      <div className="nav-item">
         <Hamburger />
-      {/* </div> */}
+      </div>
     </div>
   );
 };
