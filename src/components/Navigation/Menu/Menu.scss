@@ -1,0 +1,21 @@
+.Menu {
+  z-index: 100;
+  position: fixed;
+  //   background: white;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  opacity: 1;
+  transition: 0.5s ease-out opacity, 0.5s ease-in backdrop-filter,
+    0.5s ease-in clip-path;
+  background: rgba(98, 0, 125, 0.5);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  transform-origin: left;
+}
+
+.Menu.menu-closed {
+  clip-path: polygon(0% 0%, 0% 100%, 0 100%, 0 0);
+  opacity: 0;
+  pointer-events: none;
+}
+

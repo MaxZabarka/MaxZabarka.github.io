@@ -1,6 +1,7 @@
 @import "../../Shared/FadeIn.scss";
 
 .Navbar {
+  z-index: 1000;
   opacity: 0;
   animation: 0.3s linear fadeIn 1.8s forwards;
   color: white;
@@ -9,15 +10,13 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  z-index: 10;
-    h1 {
-        font-size: 1.5rem;
-        cursor:pointer;
-
-    }
+  h1 {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
   .nav-item {
     cursor: pointer;
-    margin: clamp(0px, 10%, 2.5rem);
+    margin: clamp(0px, 5%, 2.5rem);
   }
 }

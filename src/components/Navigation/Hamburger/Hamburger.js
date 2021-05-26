@@ -1,14 +1,8 @@
-import React, { useRef } from 'react';
 import "./Hamburger.css";
 
-const Hamburger = () => {
-
-const hamburgerRef = useRef(null)
-console.log('this :>> ', this);
+const Hamburger = (props) => {
   return (
-    <div ref={hamburgerRef} onClick={() => {
-        hamburgerRef.current.classList.toggle("open")
-    }} id="nav-icon4">
+    <div className={props.open ? "open" : ""} onClick={props.click} id="nav-icon4">
       <span></span>
       <span></span>
       <span></span>

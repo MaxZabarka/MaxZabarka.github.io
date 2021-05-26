@@ -12,7 +12,11 @@
         h1 {
             text-align: left;
             font-weight: bold;
-            font-size: clamp(0px, 12vw, 7rem);
+            font-size: clamp(3rem, 12vw, 7rem);
         }
+    }
+    @media only screen and (max-width: 1370px) { 
+        width: none;
+        margin-left:10vw;
     }
 }

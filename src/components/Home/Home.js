@@ -82,7 +82,6 @@ const Home = (props) => {
     initialY = e.touches[0].clientY;
   }
   const moveTouch = (e) => {
-
     if (initialY === null) {
       return;
     }
@@ -90,24 +89,25 @@ const Home = (props) => {
     var currentY = e.touches[0].clientY;
 
     var diffY = initialY - currentY;
-
-    // sliding vertically
-    if (diffY > 0) {
-      // swiped up
-      if (isBottom()) {
-        props.next();
-      }
-    } else {
-      // swiped down
-      if (isTop()) {
-        props.previous();
+    if (props.swiper && !props.swiper.animating) {
+      // sliding vertically
+      if (diffY > 0) {
+        // swiped up
+        if (isBottom()) {
+          props.next();
+        }
+      } else {
+        // swiped down
+        if (isTop()) {
+          props.previous();
+        }
       }
     }
 
     initialY = null;
 
     e.preventDefault();
-  }
+  };
 
   return (
     <div ref={homeElement} className="Home">

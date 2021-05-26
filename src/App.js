@@ -22,8 +22,11 @@ SwiperCore.use([EffectCube, Parallax]);
 
 //TODO
 //scrollbar progress bar
-//Reset scroll on slide change
-//Create navigation menu (reuse mars project)
+//--Reset scroll on slide change
+//--Create navigation menu (reuse mars project)
+// Show and hide navbar depending on scroll up or down
+// Make navbar background black when on second slide
+// Add scroll in transitions
 
 const speed = 2500;
 
@@ -38,7 +41,6 @@ function App() {
           swiperContainer.classList.add("swiper-container-animate")
         setTimeout(() => {
           swiperContainer.classList.remove("swiper-container-animate")
-
         }, speed);
       });
     }
@@ -67,12 +69,12 @@ function App() {
           <Home
             next={() => {
               if (swiper) {
-                swiper.slideNext(2500);
+                swiper.slideNext(speed);
               }
             }}
             previous={() => {
               if (swiper) {
-                swiper.slidePrev(2500);
+                swiper.slidePrev(speed);
               }
             }}
             swiper={swiper}
