@@ -9,3 +9,9 @@ I build and design digital products
 h1  About
 h2  Hi. I'm Max. I am a multidisciplinary developer and designer. 
 p lorem impsum blah blah
+
+Testimonials
+
+My work
+
+Contact button (takes to new page)

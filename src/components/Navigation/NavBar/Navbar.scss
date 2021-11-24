@@ -16,6 +16,7 @@
   }
 
   .nav-item {
+    user-select: none;
     cursor: pointer;
     margin: clamp(0px, 5%, 2.5rem);
   }

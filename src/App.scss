@@ -1,31 +1,30 @@
 @font-face {
-  font-family: "OpenSans-Regular";
-  src: local("OpenSans-Regular"),
-    url(./assets/OpenSans/OpenSans-Regular.ttf) format("truetype");
+  font-family: "Inter-Regular";
+  src: local("Inter-Regular"),
+    url(./assets/Inter/Inter-Regular.ttf) format("truetype");
 }
 @font-face {
-  font-family: "OpenSans-SemiBold";
-  src: local("OpenSans-SemiBold"),
-    url(./assets/OpenSans/OpenSans-SemiBold.ttf) format("truetype");
+  font-family: "Inter-SemiBold";
+  src: local("Inter-SemiBold"),
+    url(./assets/Inter/Inter-SemiBold.ttf) format("truetype");
 }
 @font-face {
-  font-family: "OpenSans-Light";
-  src: local("OpenSans-Light"),
-    url(./assets/OpenSans/OpenSans-Light.ttf) format("truetype");
+  font-family: "Inter-Light";
+  src: local("Inter-Light"),
+    url(./assets/Inter/Inter-Light.ttf) format("truetype");
 }
 @font-face {
-  font-family: "OpenSans-Bold";
-  src: local("OpenSans-Bold"),
-    url(./assets/OpenSans/OpenSans-Bold.ttf) format("truetype");
+  font-family: "Inter-Bold";
+  src: local("Inter-Bold"),
+    url(./assets/Inter/Inter-Bold.ttf) format("truetype");
 }
 @font-face {
-  font-family: "OpenSans-ExtraBold";
-  src: local("OpenSans-ExtraBold"),
-    url(./assets/OpenSans/OpenSans-ExtraBold.ttf) format("truetype");
+  font-family: "Inter-ExtraBold";
+  src: local("Inter-ExtraBold"),
+    url(./assets/Inter/Inter-ExtraBold.ttf) format("truetype");
 }
 html {
-  height:100vh;
-
+  height: 100vh;
 }
 html,
 body {
@@ -34,12 +33,11 @@ body {
 }
 #root {
   height: 100%;
-
 }
 body {
   background: black;
   overflow: hidden;
-  font-family: "OpenSans-Regular", Arial, Helvetica, sans-serif;
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
 }
 * {
   margin: 0;
@@ -47,19 +45,17 @@ body {
   // scroll-behavior: smooth;
 }
 .App {
-  height:100%;
+  height: 100%;
 }
 .swiper-container {
-
   width: 100%;
-  height:100%;
+  height: 100%;
   transition: 0.5s ease filter;
-
 }
 .swiper-container::-webkit-scrollbar {
   display: none;
 }
-.swiper-slide {  
+.swiper-slide {
   text-align: center;
   font-size: 18px;
   overflow: auto;
@@ -69,7 +65,16 @@ body {
   animation: swipeAnimation 2500ms ease-in-out;
 }
 .blur {
-  filter:blur(18px);
+  filter: blur(18px);
+}
+.purple {
+  background: #ff0088;
+  background: -webkit-linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
+  background: -moz-linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
+  background: linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @keyframes swipeAnimation {
   0% {
@@ -82,3 +87,5 @@ body {
     transform: scale(1);
   }
 }
+
+// * { outline: 1px red solid !important; visibility: visible !important }

@@ -3,7 +3,7 @@
   color: white;
   max-width: 1000px;
   margin: auto;
-    padding: 20rem 0;
+    // padding: 20rem 0;
   @media only screen and (max-width: 1370px) {
     margin-left: 10vw;
     margin-right: 10vw;
@@ -29,17 +29,17 @@
   h1 {
     color: #ff0088;
     font-size: 2rem;
-    font-family: "OpenSans-Bold";
+    font-family: "Inter-Bold";
   }
 
   h2 {
     font-size: 1.5rem;
-    font-family: "OpenSans-Regular";
+    font-family: "Inter-Regular";
     margin-top: 3vh;
     margin-bottom: 4vh;
   }
   span {
-    font-family: "OpenSans-Bold";
+    font-family: "Inter-Bold";
 
   }
 

@@ -16,6 +16,7 @@ import "./App.scss";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Navbar from "./components/Navigation/NavBar/Navbar";
+import Work from "./components/Work/Work";
 
 // install Swiper modules
 SwiperCore.use([EffectCube, Parallax]);
@@ -82,6 +83,7 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <About />
+          <Work/>
         </SwiperSlide>
       </Swiper>
     </div>

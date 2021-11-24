@@ -5,7 +5,7 @@ const Caption = () => {
     return (
         <div className="Caption">
             <div>
-                 <h1>I build & design digital products</h1>
+                 <h1>I build & design <span className="purple">digital products</span></h1>
             </div>
         </div>
     );
