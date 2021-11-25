@@ -36,15 +36,20 @@ function App() {
   // store swiper instance
   const [swiper, setSwiper] = useState(null);
   setInterval(() => {
-    // document.querySelector(".swiper-container").style.transform += " translateZ(1px)"
-    // document.querySelector(".swiper-wrapper").style.transform += " translateZ(1px)"
-    // document.querySelector(".swiper-slide").style.transform += " translateZ(1px)"
+    // document.querySelector(".swiper-container").style.transform = ""
+    // document.querySelector(".swiper-wrapper").style.transform = ""
+    // document.querySelector(".swiper-slide-active").style.transform = ""
+    // document.querySelector(".swiper-wrapper").style.transform = ""
+
     // console.log(document.querySelector(".swiper-container").classList.remove("swiper-container-cube"))
     // console.log(document.querySelector(".swiper-container").classList.remove("swiper-container-3d"))
   }, 1000);
   useEffect(() => {
+
     if (swiper) {
       const swiperContainer = document.querySelector(".swiper-container");
+      // swiperContainer.classList.add("swiper-container-animate");
+
       swiper.on("slideChangeTransitionStart", () => {
         swiperContainer.classList.add("swiper-container-animate");
         setTimeout(() => {
@@ -64,14 +69,14 @@ function App() {
         }}
         speed={speed}
         allowTouchMove={false}
-        parallax={true}
+        // parallax={true}
         onSwiper={setSwiper}
         direction={"vertical"}
         cubeEffect={{
           shadow: false,
           slideShadows: false,
         }}
-        // effect="cube"
+        effect="cube"
       >
         <SwiperSlide>
           <Home

@@ -44,6 +44,10 @@ body {
 * {
   margin: 0;
   padding: 0;
+  // position: relative;
+  // -webkit-overflow-scrolling: touch ;
+  // overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   // scroll-behavior: smooth;
 }
 .App {
@@ -57,19 +61,27 @@ body {
 .swiper-container::-webkit-scrollbar {
   display: none;
 }
+.swiper-wrapper {
+  // transform: none !important;
+  // -webkit-backface-visibility: hidden  !important;
+
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
+  // -webkit-transform: none !important;
+  // // -webkit-transform: translateZ(0) !important;
+  // -webkit-backface-visibility: hidden  !important;
   // overflow: visible;
   // overflow: visible;
   // overflow-y: scroll;
-  overflow-y: auto !important;
+  overflow-y: auto;
 }
 
 .swiper-container-animate {
   // perspective: 1000px;
   animation: swipeAnimation3 2500ms ease-in-out;
-  overflow:visible;
+  overflow: visible;
 
   // perspective: 1000px;
   // animation: swipeAnimation 2500ms ease-in-out;
@@ -78,24 +90,24 @@ body {
 //   border: 5px solid red;
 
 // }
-.swiper-wrapper {
-  perspective: 1000px;
-}
-.swiper-container-animate > .swiper-wrapper {
-  // border: 5px solid green;
-  overflow:visible;
+// .swiper-wrapper {
+//   perspective: 1000px;
+// }
+// .swiper-container-animate > .swiper-wrapper {
+//   // border: 5px solid green;
+//   overflow:visible;
 
-}
-.swiper-container-animate .swiper-slide:nth-of-type(1) {
-  animation: swipeAnimation1 2500ms ease-in-out;
-  transform-origin: bottom center;
-  // border: 5px solid red;
-}
-.swiper-container-animate .swiper-slide:nth-of-type(2) {
-  // border: 5px solid blue;
-  animation: swipeAnimation2 2500ms ease-in-out;
-  transform-origin: top center;
-}
+// }
+// .swiper-container-animate .swiper-slide:nth-of-type(1) {
+//   animation: swipeAnimation1 2500ms ease-in-out;
+//   transform-origin: bottom center;
+//   // border: 5px solid red;
+// }
+// .swiper-container-animate .swiper-slide:nth-of-type(2) {
+//   // border: 5px solid blue;
+//   animation: swipeAnimation2 2500ms ease-in-out;
+//   transform-origin: top center;
+// }
 
 @keyframes swipeAnimation1 {
   0% {
