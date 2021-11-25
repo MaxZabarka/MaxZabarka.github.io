@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./components/Shared/PaintHover.scss"
+import "./components/Shared/PaintHover.scss";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/swiper.min.css";
 import "swiper/components/effect-cube/effect-cube.min.css";
-import "swiper/components/pagination/pagination.min.css";
+// import "swiper/components/pagination/pagination.min.css";
 
 // import Swiper core and required modules
 import SwiperCore, { EffectCube, Parallax } from "swiper/core";
@@ -29,30 +29,37 @@ SwiperCore.use([EffectCube, Parallax]);
 // Make navbar background black when on second slide
 // Add scroll in transitions
 
+
 const speed = 2500;
 
 function App() {
   // store swiper instance
   const [swiper, setSwiper] = useState(null);
-
+  setInterval(() => {
+    // document.querySelector(".swiper-container").style.transform += " translateZ(1px)"
+    // document.querySelector(".swiper-wrapper").style.transform += " translateZ(1px)"
+    // document.querySelector(".swiper-slide").style.transform += " translateZ(1px)"
+    // console.log(document.querySelector(".swiper-container").classList.remove("swiper-container-cube"))
+    // console.log(document.querySelector(".swiper-container").classList.remove("swiper-container-3d"))
+  }, 1000);
   useEffect(() => {
     if (swiper) {
       const swiperContainer = document.querySelector(".swiper-container");
       swiper.on("slideChangeTransitionStart", () => {
-          swiperContainer.classList.add("swiper-container-animate")
+        swiperContainer.classList.add("swiper-container-animate");
         setTimeout(() => {
-          swiperContainer.classList.remove("swiper-container-animate")
+          swiperContainer.classList.remove("swiper-container-animate");
         }, speed);
       });
     }
   }, [swiper]);
   return (
     <div className="App">
-      <Navbar/>
+      <Navbar />
       <Swiper
         onSlideChange={() => {
           for (const slide of document.querySelectorAll(".swiper-slide")) {
-            slide.scrollTo(0,0)
+            slide.scrollTo(0, 0);
           }
         }}
         speed={speed}
@@ -64,7 +71,7 @@ function App() {
           shadow: false,
           slideShadows: false,
         }}
-        effect="cube"
+        // effect="cube"
       >
         <SwiperSlide>
           <Home
@@ -83,7 +90,7 @@ function App() {
         </SwiperSlide>
         <SwiperSlide>
           <About />
-          <Work/>
+          <Work />
         </SwiperSlide>
       </Swiper>
     </div>

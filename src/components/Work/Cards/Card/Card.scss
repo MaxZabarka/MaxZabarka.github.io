@@ -1,125 +1,38 @@
 .Card {
-  overflow: hidden;
-  filter: grayscale(0);
-  background: grey;
-  color: white;
-  height: 500px;
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-
-  .top-left {
-    transition: 1s ease all;
-    border: 2px solid #ff0088;
-    border-radius: 10px;
-    position: absolute;
-    left: 3%;
-    top: 3%;
-    background-color: rgba(0, 0, 0, 1);
-    padding: 0.3rem;
-    display: flex;
-    align-items: center;
-    h2 {
-      text-transform: uppercase;
-      opacity: 0.8;
-      letter-spacing: 2px;
-      font-weight: unset;
-      font-family: "Inter-Regular";
-      font-size: 1rem;
-      display: inline-block;
-    }
-    div {
-      opacity: 0.8;
-
-      width: 5px;
-      height: 5px;
-      background: white;
-      display: inline-block;
-      border-radius: 50%;
-      margin: 0 0.5rem;
-    }
-  }
-
-  .content {
-    transition: 1s ease all;
-
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    h1,
-    p {
-      // border-radius: 15px;
-      border:2px solid #ff0088;
-      background-color: rgba(0, 0, 0, 1);
-      padding: 0 1rem;
-      width: 70%;
-    }
-    p {
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-      border-top:none;
-      padding-bottom: 1rem;
-      font-size: clamp(0px, 5vw, 1.1rem);
-
-
-    }
-    h1 {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      border-bottom: none;
-      font-family: "Inter-Bold";
-      font-weight: unset;
-      font-size: clamp(0px, 6vw, 1.5rem);
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-
-    }
-
-  }
-  .buttons {
-    opacity: 0;
-    a,button {
-      margin: 1rem auto;
-      display: block;
-      width:60%;
-      padding: 0.7rem 0;
-      background:black;
-      color:white;
-      border: 2px solid #ff0088;
-      border-radius: 10px;
-      font-size: 1rem;
-      text-transform: uppercase;
-      font-family: "Inter-SemiBold";
-      letter-spacing: 2px ;
-      transition: background-color 0.7s ease;
-      cursor: pointer;
-      text-decoration: none;
-
-      &:hover {
-        background-color: #ff0088;
-      }
-    }
-    position: absolute;
-    top:100%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  background: #1d1d1d;
+  height: 20rem;
+  text-align: left;
+  // padding: 2rem;
+  margin: 1rem;
+  img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 50%;
     width: 100%;
-    transition: 1s ease all;
-
   }
-
-  transition: 1s ease all;
-}
-.Card.hover {
-  .top-left {
-    opacity: 0;
+  h1,
+  p {
+    margin: 1rem;
+    color: white;
   }
-  .content {
-    transform: translateY(-6rem);
-
+  h1 {
+    font-family: "Inter-Bold";
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0rem;
   }
-  .buttons {
-    opacity: 1;
-    transform: translateY(-14rem);
+  p {
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+    opacity: 0.7;
+  }
+  ul {
+    flex-wrap: wrap;
+    display: flex;
+    list-style: none;
+    margin-left: 1rem;
   }
 }

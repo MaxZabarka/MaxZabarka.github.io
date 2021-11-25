@@ -1,0 +1,30 @@
+.Tag-button {
+  padding: 0.2rem 0.4rem;
+  // outline: none;
+  border: 2px solid black;
+  // border:none;
+  margin: 0.3rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: 0.3s transform, 0.3s border;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px) translateZ(0);
+  }
+  &.active {
+    border: 2px solid white;
+  }
+}
+
+.Tag-li {
+  font-size: 0.65rem;
+  margin-right: 0.3rem;
+  margin-top: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  color: white;
+  font-family: "Inter-ExtraBold";
+  border-radius: 10px;
+  border: 2px solid white;
+}

@@ -28,6 +28,8 @@ html {
 }
 html,
 body {
+  overflow-x: hidden;
+
   position: relative;
   height: 100%;
 }
@@ -58,12 +60,84 @@ body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  overflow: auto;
+  // overflow: visible;
+  // overflow: visible;
+  // overflow-y: scroll;
+  overflow-y: auto !important;
 }
 
 .swiper-container-animate {
-  animation: swipeAnimation 2500ms ease-in-out;
+  // perspective: 1000px;
+  animation: swipeAnimation3 2500ms ease-in-out;
+  overflow:visible;
+
+  // perspective: 1000px;
+  // animation: swipeAnimation 2500ms ease-in-out;
 }
+// .swiper-container :nth-child(1) {
+//   border: 5px solid red;
+
+// }
+.swiper-wrapper {
+  perspective: 1000px;
+}
+.swiper-container-animate > .swiper-wrapper {
+  // border: 5px solid green;
+  overflow:visible;
+
+}
+.swiper-container-animate .swiper-slide:nth-of-type(1) {
+  animation: swipeAnimation1 2500ms ease-in-out;
+  transform-origin: bottom center;
+  // border: 5px solid red;
+}
+.swiper-container-animate .swiper-slide:nth-of-type(2) {
+  // border: 5px solid blue;
+  animation: swipeAnimation2 2500ms ease-in-out;
+  transform-origin: top center;
+}
+
+@keyframes swipeAnimation1 {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+@keyframes swipeAnimation2 {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes swipeAnimation3 {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.7) translateY(30vh);
+  }
+  0% {
+    transform: scale(1);
+  }
+}
+
+// .swiper-container-animate {
+//   .swiper-slide-active {
+//     border: 5px solid red;
+//   }
+//   .swiper-slide-next {
+//     border: 5px solid blue;
+//   }
+//   .swiper-slide-prev {
+//     border: 5px solid red;
+
+//   }
+// }
 .blur {
   filter: blur(18px);
 }
@@ -75,6 +149,8 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 @keyframes swipeAnimation {
   0% {

@@ -6,7 +6,7 @@ const AboutBody = () => {
     <div className="AboutBody">
       <h1 className="purple">About</h1>
       <h2>
-        <span>Hi. I’m Max. Nice to meet you.</span> I am a designer and
+        <span>Hi, I’m Max. Nice to meet you.</span> I am a designer and
         developer with a wide range of experience in various digital and
         artistic disciplines.
       </h2>

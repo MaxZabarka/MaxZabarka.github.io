@@ -1,31 +1,43 @@
 .Work {
+  width: 80vw;
+  margin: auto;
+
   & > h1 {
-    text-align: left;
-    margin-left:10vw;
-    color: #ff0088;
+    margin: 1rem;
+    // width: ;
+    text-align: center;
+    // margin-left: 10vw;
+    // color: #ff0088;
+    color: white;
     // color: #ff0088;
     font-size: 2rem;
-    font-family: "Inter-Bold";
+    span {
+      font-family: "Inter-Bold";
+    }
     font-weight: unset;
-    padding: 3rem 0;
+    // padding: 3rem 0;
     // background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(72,0,154,1) 29%, rgba(154,0,148,1) 69%, rgba(114,0,154,1) 83%);
     animation: gradient 7s ease infinite;
     background-size: 400% 400%;
-
+  }
+  & > p {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
   }
 
-
-//   background: #ff0088;
-//   border-top: 2px solid white;
+  //   background: #ff0088;
+  //   border-top: 2px solid white;
 }
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
