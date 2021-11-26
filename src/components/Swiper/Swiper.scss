@@ -1,39 +1,92 @@
+// .Cube {
+//   width: 100vw;
+//   height: 100%;
+//   position: relative;
+//   perspective: 1000px;
+//   transition: 0.3s ease filter;
+//   .side-1,
+//   .side-2 {
+//     backface-visibility: hidden;
+
+//     overflow: auto;
+//     background: black;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//   }
+//   .side-1-animate {
+//     transform: rotateX(90deg) translateZ(50vh);
+//   }
+//   .side-2-animate {
+//     transform: translateZ(50vh);
+//   }
+//   & > div {
+//     &.show-1 {
+//       transform: translateZ(-50vh) rotateX(-90deg);
+//     }
+
+//     &.show-2 {
+//       transform: translateZ(-50vh);
+//     }
+
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//     transform-style: preserve-3d;
+//     transition: transform 2.5s;
+//   }
+// }
+
+// @keyframes side-1-spin {
+//   0% {
+//   }
+//   100% {
+//   }
+// }
+
 .Cube {
   width: 100vw;
   height: 100%;
   position: relative;
   perspective: 1000px;
-    transition: 0.3s ease filter;
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-50vh);
+  transition: 1s ease transform;
   .side-1,
   .side-2 {
-    backface-visibility: hidden;
-
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
     overflow: auto;
-    background: black;
-    width: 100%;
-    height: 100%;
-    position: absolute;
   }
-  & > div {
-    &.show-1 {
-      transform: translateZ(-50vh) rotateX(-90deg);
-    }
+  .side-1 {
+    // background: #f00;
+    transform: translateZ(50vh) translate3d(0, 0, 0);
+  }
+  .side-2 {
+    // background: #ff0;
+    transform: rotateX(-90deg) translateZ(50vh) translate3d(0, 0, 0);
+  }
+}
 
-    &.show-2 {
-      transform: translateZ(-50vh);
-    }
+.cube.show-1 {
+  transform: translateZ(-50vh) translate3d(0, 0, 0);
 
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 2.5s;
+}
+.cube.show-2 {
+  transform: translateZ(-50vh) rotateX(90deg);
 
-    .side-1-animate {
-      transform: rotateX(90deg) translateZ(50vh);
-    }
-    .side-2-animate {
-      transform: translateZ(50vh);
-    }
+}
+
+@keyframes spin-cube {
+  0% {
+  }
+  100% {
   }
 }

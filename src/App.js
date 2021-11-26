@@ -31,7 +31,7 @@ function App() {
           }
         }}
         speed={speed}
-        firstSlide={false}
+        firstSlide={true}
         slide1={
           <Home
             next={() => {
