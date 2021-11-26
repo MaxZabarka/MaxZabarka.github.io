@@ -44,49 +44,102 @@
 //   }
 // }
 
+.Cube.finish-transition {
+  .side-1 {
+    display: none;
+  }
+  .side-2 {
+    pointer-events: all;
+    z-index: 10000;
+    transform: none;
+    position: static;
+  }
+  .show-2 {
+    transition: none;
+    transform: none;
+  }
+  // .side-1 {
+  //   display: none;
+  // }
+  // .side-2 {
+  //   transform: none;
+  //   display: block;
+  // }
+  // * {
+  //   transition: none !important;
+  // }
+  // * {
+  //   transform:none !important;
+  //   transition: 0s;
+  // }
+}
+
 .Cube {
   width: 100vw;
   height: 100%;
   position: relative;
   perspective: 1000px;
+  transition: 0.3s ease filter;
 }
+
+.cube.show-1 {
+  transform: translate3d(0px, 0px, -50vh);
+}
+.cube.show-2 {
+  transform: translate3d(0px, 0px, -50vh) rotateX(90deg);
+}
+
 .cube {
   width: 100%;
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
-  transform: translateZ(-50vh);
-  transition: 1s ease transform;
-  .side-1,
-  .side-2 {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    overflow: auto;
-  }
-  .side-1 {
-    // background: #f00;
-    transform: translateZ(50vh) translate3d(0, 0, 0);
-  }
-  .side-2 {
-    // background: #ff0;
-    transform: rotateX(-90deg) translateZ(50vh) translate3d(0, 0, 0);
-  }
+  transition: 3s ease transform;
+  backface-visibility: hidden;
 }
 
-.cube.show-1 {
-  transform: translateZ(-50vh) translate3d(0, 0, 0);
+.side-1,
+.side-2 {
+  overflow: scroll;
 
+  // overflow: hidden;
+  backface-visibility: hidden;
+
+  width: 100%;
+  height: 100%;
+  // display: block;
+  position: absolute;
 }
-.cube.show-2 {
-  transform: translateZ(-50vh) rotateX(90deg);
-
+.side-1 {
+  // animation: spin-side-1 1s ease forwards;
+  // background: #f00;
+  transform: translate3d(0px, 0px, 50vh);
+}
+.side-2 {
+  // animation: spin-side-2 1s steps(1) forwards;
+  transform: rotateX(-90deg) translate3d(0px, 0px, 50vh);
 }
 
 @keyframes spin-cube {
   0% {
   }
   100% {
+  }
+}
+@keyframes spin-side-1 {
+  0% {
+    // opacity: 1;
+  }
+  100% {
+    // opacity: 0;
+    // visibility: hidden;
+  }
+}
+@keyframes spin-side-2 {
+  0% {
+    transform: rotateX(-90deg) translate3d(0px, 0px, 50vh);
+  }
+  100% {
+    transform: rotateX(0) translate3d(0px, 0px, 0px);
   }
 }

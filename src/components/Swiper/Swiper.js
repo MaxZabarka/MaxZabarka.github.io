@@ -3,29 +3,49 @@ import "./Swiper.scss";
 
 const Swiper = (props) => {
   const wrapperRef = useRef(null);
-  const [transitioning, setTransitioning] = useState(false);
-  const [initialRender, setInitialRender] = useState(true);
-  console.log("transitioning :>> ", transitioning);
+  const firstUpdate = useRef(true);
+  const transitioning = useRef(false);
+
   useEffect(() => {
-    console.log("transition start");
-    setTransitioning(true);
+    if (firstUpdate.current) {
+      firstUpdate.current = false;
+    } else {
+      document.querySelector(".Cube").classList.remove("finish-transition");
+    }
+    if (props.firstSlide) {
+      document.querySelector(".cube").classList.add("show-1");
+      document.querySelector(".cube").classList.remove("show-2");
+    } else {
+      document.querySelector(".cube").classList.remove("show-1");
+      document.querySelector(".cube").classList.add("show-2");
+    }
   }, [props.firstSlide]);
 
-  console.log("props.firstSlide :>> ", props.firstSlide);
-  // if (!(!transitioning && !props.firstSlide)) {
-  console.log("IN HERE");
   return (
     <div className="Cube">
-      <div className="cube show-1">
-        <div className="side-1">
-          {props.slide1}
-        </div>
+      <div
+        ref={wrapperRef}
+        className={"cube show-1"}
+        onTransitionEnd={(e) => {
+          if (e.target === wrapperRef.current) {
+            if (!props.firstSlide) {
+              document
+                .querySelector(".Cube")
+                .classList.add("finish-transition");
+            }
+            // transitioning.current = false;
+            // console.log("transitioning.current :>> ", transitioning.current);
+          }
+        }}
+      >
+        <div className="side-1">{props.slide1}</div>
         <div className="side-2">
           <div>{props.slide2}</div>
         </div>
       </div>
     </div>
   );
+
   // } else {
   //   console.log("IN HERE 2");
   //   return (

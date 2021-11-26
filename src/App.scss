@@ -28,10 +28,12 @@ html {
 }
 html,
 body {
+  // pointer-events: none;
   overflow: hidden;
   position: relative;
   height: 100%;
 }
+
 #root {
   height: 100%;
 }
@@ -46,7 +48,7 @@ body {
   // position: relative;
   // -webkit-overflow-scrolling: auto !important;
   // overflow-y: scroll;
-  // -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch !important;
   // scroll-behavior: smooth;
 }
 .App {

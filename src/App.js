@@ -21,6 +21,7 @@ const speed = 2500;
 
 function App() {
   const [firstSlide, setFirstSlide] = useState(true);
+
   return (
     <div className="App">
       <Navbar />
@@ -46,7 +47,7 @@ function App() {
           <>
             <About />
             <Work />
-            <Contact/>
+            <Contact />
           </>
         }
       ></Swiper>
