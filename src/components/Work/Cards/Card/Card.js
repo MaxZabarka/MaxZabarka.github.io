@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import Tag from "../Tag/Tag";
 import "./Card.scss";
 
-const Card = (props) => {
+const Card = forwardRef((props, ref) => {
   return (
-    <div className="Card">
+    <div ref={ref} className="Card">
       <img alt="" src={props.image} />
       <h1>{props.title}</h1>
       <ul>
@@ -16,6 +16,6 @@ const Card = (props) => {
       <p>{props.description}</p>
     </div>
   );
-};
+});
 
 export default Card;

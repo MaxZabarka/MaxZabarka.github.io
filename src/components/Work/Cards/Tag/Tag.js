@@ -11,6 +11,7 @@ const TAG_COLORS = {
   C: "5286FF",
   Assembly: "B000E0",
   Python: "10C19E",
+  All:"1D1D1D"
 };
 
 const lightenColor = function (color, percent) {
@@ -41,7 +42,7 @@ const Tag = (props) => {
   console.log(background);
   if (props.onClick) {
     return (
-      <button style={{ background }} className="Tag-button">
+      <button onClick={props.onClick} style={{ background, ...props.active ? {border:"2px solid white"} : {} }} className="Tag-button">
         {props.children}
       </button>
     );

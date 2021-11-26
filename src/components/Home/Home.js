@@ -12,35 +12,25 @@ const Home = (props) => {
   const homeElement = useRef(null);
 
   useEffect(() => {
-    document.querySelector(".swiper-container").onwheel = (event) => {
-      console.log("event.deltaY :>> ", event.deltaY);
-      const atTop = isTop();
-      const atBottom = isBottom();
-      console.log("props.swiper.progress :>> ", props.swiper.animating);
-
-      console.log("atTop, atBottom :>> ", atTop, atBottom);
-      if (!props.swiper.animating) {
-        if (atTop && props.swiper.realIndex !== 0 && event.deltaY < 0) {
-          console.log('"previous" :>> ', "previous");
-          props.previous();
-        }
-        if (
-          atBottom &&
-          event.deltaY > 0 &&
-          props.swiper.realIndex !== props.swiper.slides.length - 1
-        ) {
-          console.log('"next" :>> ', "next");
-          props.next();
-        }
+    document.querySelector(".Home").onwheel = (event) => {
+      console.log("TEST");
+      if (event.deltaY > 0) {
+        props.next();
       }
     };
+    document.querySelector(".About").onwheel = (event) => {
+      if (event.deltaY > 0) {
+        props.next();
+      }
+    };
+    // };
 
     // window.addEventListener(
     //   "resize",
     //   resetHeight.bind(null, document.querySelector(".swiper-container"))
     // );
-    document.body.addEventListener("touchstart", startTouch, false);
-    document.body.addEventListener("touchmove", moveTouch, false);
+    // document.body.addEventListener("touchstart", startTouch, false);
+    // document.body.addEventListener("touchmove", moveTouch, false);
 
     // resetHeight(document.querySelector(".swiper-container"));
   });
@@ -59,7 +49,7 @@ const Home = (props) => {
   }, []);
 
   function isBottom() {
-    const activeSlide = document.querySelector(".swiper-slide-active");
+    const activeSlide = document.getElementById("side-active");
     return (
       activeSlide.scrollTop + activeSlide.offsetHeight ===
       activeSlide.scrollHeight
@@ -67,47 +57,65 @@ const Home = (props) => {
   }
 
   function isTop() {
-    const activeSlide = document.querySelector(".swiper-slide-active");
+    const activeSlide = document.getElementById("side-active");
     return activeSlide.scrollTop === 0;
   }
-
-  // Code for detecting mobile swipe up
-  let initialY = null;
 
   // function resetHeight(sliderContainerElement) {
   //   sliderContainerElement.style.height = window.innerHeight + "px";
   // }
 
-  function startTouch(e) {
-    initialY = e.touches[0].clientY;
+  document.addEventListener("touchstart", handleTouchStart, false);
+  document.addEventListener("touchmove", handleTouchMove, false);
+
+  var xDown = null;
+  var yDown = null;
+
+  function getTouches(evt) {
+    return (
+      evt.touches || // browser API
+      evt.originalEvent.touches
+    ); // jQuery
   }
-  const moveTouch = (e) => {
-    if (initialY === null) {
+
+  function handleTouchStart(evt) {
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
+  }
+
+  function handleTouchMove(evt) {
+    if (!xDown || !yDown) {
       return;
     }
 
-    var currentY = e.touches[0].clientY;
+    var xUp = evt.touches[0].clientX;
+    var yUp = evt.touches[0].clientY;
 
-    var diffY = initialY - currentY;
-    if (props.swiper && !props.swiper.animating) {
-      // sliding vertically
-      if (diffY > 0) {
-        // swiped up
-        if (isBottom()) {
-          props.next();
-        }
+    var xDiff = xDown - xUp;
+    var yDiff = yDown - yUp;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+      /*most significant*/
+      if (xDiff > 0) {
+        /* right swipe */
       } else {
-        // swiped down
-        if (isTop()) {
-          props.previous();
-        }
+        /* left swipe */
+      }
+    } else {
+      if (yDiff > 0) {
+        props.next();
+        /* down swipe */
+      } else {
+        props.next();
+
+        /* up swipe */
       }
     }
-
-    initialY = null;
-
-    e.preventDefault();
-  };
+    /* reset values */
+    xDown = null;
+    yDown = null;
+  }
 
   return (
     <div ref={homeElement} className="Home">
