@@ -5,7 +5,7 @@ import "./Menu.scss"
 const Menu = (props) => {
     return (
         <div className={"Menu " + (props.open ? "" : "menu-closed")}>
-            <MenuContent/>
+            <MenuContent onClose={props.onClose} onNavigate={props.onNavigate}/>
         </div>
     );
 };

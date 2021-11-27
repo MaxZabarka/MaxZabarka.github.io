@@ -6,27 +6,40 @@ import emailIcon from "../../../assets/Icons/email.svg";
 
 import "./MenuContent.scss";
 
-const MenuContent = () => {
+const MenuContent = (props) => {
   return (
     <div className="MenuContent">
       <ul>
         <li>
-          <button href="#">
+          <button onClick={() => {
+            props.onNavigate("Home")
+            props.onClose()
+          }} href="#">
             <span className="paint-hover">Home</span>
           </button>
         </li>
         <li>
-          <button href="#">
+          <button onClick={() => {
+            props.onNavigate("About")
+            props.onClose()
+          }} href="#">
             <span className="paint-hover">About</span>
           </button>
         </li>
         <li>
-          <button href="#">
-            <span className="paint-hover">Projects</span>
+          <button onClick={() => {
+            props.onNavigate("Work")
+            props.onClose()
+          }} href="#">
+            <span className="paint-hover">Work</span>
           </button>
         </li>
         <li>
-          <button href="#">
+          <button onClick={() => {
+            props.onNavigate("Contact")
+            props.onClose()
+
+          }} href="#">
             <span className="paint-hover">Contact</span>
           </button>
         </li>

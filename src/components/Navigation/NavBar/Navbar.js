@@ -3,20 +3,29 @@ import "./Navbar.scss";
 import Hamburger from "../Hamburger/Hamburger";
 import Menu from "../Menu/Menu";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    
     if (openMenu) {
-      document.querySelector(".Cube").classList.add("blur");
+      document.querySelector(".swiper-container").classList.add("blur");
     } else {
-      document.querySelector(".Cube").classList.remove("blur");
+      document.querySelector(".swiper-container").classList.remove("blur");
     }
   }, [openMenu]);
   return (
     <>
-      <div className="Navbar">
+      <div
+        style={
+          props.darken
+            ? {
+                background:
+                  "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+              }
+            : {}
+        }
+        className="Navbar"
+      >
         <div className="nav-item">
           <h1 className="name paint-hover">zabarka</h1>
         </div>
@@ -29,7 +38,9 @@ const Navbar = () => {
           />
         </div>
       </div>
-      <Menu open={openMenu} />
+      <Menu onClose={() => {
+        setOpenMenu(false)
+      }} onNavigate={props.onNavigate} open={openMenu} />
     </>
   );
 };

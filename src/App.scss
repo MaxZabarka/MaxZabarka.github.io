@@ -48,7 +48,7 @@ body {
   // position: relative;
   // -webkit-overflow-scrolling: auto !important;
   // overflow-y: scroll;
-  -webkit-overflow-scrolling: touch !important;
+  // -webkit-overflow-scrolling: touch !important;
   // scroll-behavior: smooth;
 }
 .App {
@@ -155,8 +155,6 @@ body {
 }
 .purple {
   background: #ff0088;
-  background: -webkit-linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
-  background: -moz-linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
   background: linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
   background-clip: text;
   -webkit-background-clip: text;

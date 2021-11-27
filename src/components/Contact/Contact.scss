@@ -1,3 +1,17 @@
 .Contact {
-    height: 1000px;
+  padding-top: 7rem;
+  .icons {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .Icon {
+      margin: 0 0.6rem;
+      background: linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
+      width: clamp(2rem, 10vw, 2.5rem);
+      height: clamp(2rem, 10vw, 2.5rem);
+    }
+    display: flex;
+  }
 }
