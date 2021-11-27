@@ -4,12 +4,23 @@ import "./Input.scss";
 const Input = (props) => {
   return (
     <>
-      <div style={props.textarea ? {} : {height:"3rem"}} className="Input">
-        <label for={props.name}>{props.name}</label>
-        {props.textarea ? (
-          <textarea rows="9" className="field" {...props} />
+      <div style={props.textArea ? {} : { height: "3rem" }} className="Input">
+        <label htmlFor={props.name}>{props.name}</label>
+        {props.textArea ? (
+          <textarea
+            rows="9"
+            className="field"
+            name={props.name}
+            type={props.type}
+            placeholder={props.placeholder}
+          />
         ) : (
-          <input className="field" {...props} />
+          <input
+            className="field"
+            name={props.name}
+            type={props.type}
+            placeholder={props.placeholder}
+          />
         )}
         <div className="top-left" />
         <div className="bottom-right" />

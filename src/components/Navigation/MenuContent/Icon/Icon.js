@@ -7,7 +7,7 @@ const Icon = (props) => {
     <a target="_blank" href={props.link} rel="noopener noreferrer">
       <div
         className="Icon"
-        style={{ webkitMask:mask, mask }}
+        style={{ WebkitMask:mask, mask }}
       >
         {/* <img className="overlay" src={props.image} alt={props.alt}></img>
         <img className="hover" src={props.image} alt={props.alt}></img> */}

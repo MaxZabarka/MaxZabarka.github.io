@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./CardFilter.scss";
 import Tag from "../Tag/Tag";
-import { useEffect } from "react/cjs/react.development";
 
 const CardFilter = (props) => {
   const [selectedTags, setSelectedTags] = useState(new Set(props.tags));
   const all = selectedTags.size === props.tags.length;
 
   useEffect(() => {
+    console.log("selectedTags :>> ", selectedTags);
     props.onSelectedTagsChange(selectedTags);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedTags]);
+  }, [selectedTags, props]);
 
   return (
     <div className="CardFilter">

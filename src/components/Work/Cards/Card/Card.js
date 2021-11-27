@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef } from "react";
+import React, { forwardRef } from "react";
 import Tag from "../Tag/Tag";
 import "./Card.scss";
 
@@ -10,7 +10,7 @@ const Card = forwardRef((props, ref) => {
       <ul>
         {props.tags.map((element) => {
           console.log(element);
-          return <Tag>{element}</Tag>;
+          return <Tag key={element}>{element}</Tag>;
         })}
       </ul>
       <p>{props.description}</p>

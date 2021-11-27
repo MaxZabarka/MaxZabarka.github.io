@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Form.scss";
 import Input from "./Input/Input";
 import emailjs from "emailjs-com";
-import Icon from "../../Navigation/MenuContent/Icon/Icon";
 import emailIcon from "../../../assets/Icons/email.svg";
 import spinnerIcon from "../../../assets/Icons/spinner.svg";
 
@@ -41,7 +40,7 @@ const Form = () => {
         <Input name="from_name" type="text" placeholder="Name" />
         <Input name="reply_to" type="email" placeholder="Email" />
         <Input name="company" type="text" placeholder="Company" />
-        <Input name="message" textarea placeholder="Message" />
+        <Input name="message" textArea={true} placeholder="Message" />
         <button type="submit" disabled={sendState === 2 }>
           {sendState === 2 ? "Sent!" : "Send"}
 
