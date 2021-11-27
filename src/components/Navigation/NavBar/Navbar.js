@@ -26,10 +26,12 @@ const Navbar = (props) => {
         }
         className="Navbar"
       >
-        <div className="nav-item">
+        {/* We have to put margin: clamp in here, because the minifier messes it up when we put in css file */}
+        {/* it has to be 0px and not just 0 */}
+        <div style={{ margin: "clamp(0px, 5%, 2.5rem)" }} className="nav-item">
           <h1 className="name paint-hover">zabarka</h1>
         </div>
-        <div className="nav-item">
+        <div style={{ margin: "clamp(0px, 5%, 2.5rem)" }} className="nav-item">
           <Hamburger
             open={openMenu}
             click={() => {
@@ -38,9 +40,13 @@ const Navbar = (props) => {
           />
         </div>
       </div>
-      <Menu onClose={() => {
-        setOpenMenu(false)
-      }} onNavigate={props.onNavigate} open={openMenu} />
+      <Menu
+        onClose={() => {
+          setOpenMenu(false);
+        }}
+        onNavigate={props.onNavigate}
+        open={openMenu}
+      />
     </>
   );
 };
