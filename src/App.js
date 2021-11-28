@@ -77,7 +77,7 @@ function App() {
         allowTouchMove={false}
         parallax={!isSafari}
         onSwiper={setSwiper}
-        direction={"vertical"}
+        direction="vertical"
         cubeEffect={{
           shadow: false,
           slideShadows: false,

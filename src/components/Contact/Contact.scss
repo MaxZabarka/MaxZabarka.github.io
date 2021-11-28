@@ -9,9 +9,19 @@
     .Icon {
       margin: 0 0.6rem;
       background: linear-gradient(to top left, #ff0088 0%, #9000ff 100%);
-      width: clamp(2rem, 10vw, 2.5rem);
-      height: clamp(2rem, 10vw, 2.5rem);
+      width: clamp(2.2rem, 10vw, 3rem);
+      height: clamp(2.2rem, 10vw, 3rem);
     }
     display: flex;
   }
+  p {
+    a {
+      color: white;
+    }
+    color: white;
+    opacity: 0.5;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+  margin-bottom: 1rem;
 }

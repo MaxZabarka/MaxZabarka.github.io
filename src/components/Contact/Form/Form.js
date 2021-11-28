@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Form.scss";
 import Input from "./Input/Input";
 import emailjs from "emailjs-com";
-import emailIcon from "../../../assets/Icons/email.svg";
+import sendIcon from "../../../assets/Icons/send.png";
 import spinnerIcon from "../../../assets/Icons/spinner.svg";
 
 const Form = () => {
@@ -53,7 +53,7 @@ const Form = () => {
                 marginLeft: "0.6rem",
               }}
               alt=""
-              src={emailIcon}
+              src={sendIcon}
             />
           ) : (
             <img

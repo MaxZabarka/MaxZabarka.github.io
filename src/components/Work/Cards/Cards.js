@@ -39,76 +39,87 @@ const CARD_DATA = [
     image: portfolioImage,
     description:
       "A high performance and responsive website made using React to create an enriching and animated user experience",
+    demo:"https://maxzabarka.github.io/portfolio/",
+    github:"https://github.com/maxzabarka/portfolio"
   },
   {
     title: "Rebbit",
     tags: ["Web", "Express", "MongoDB"],
+    image: portfolioImage,
     description: "Clone of a certain website made with server-side rendering",
   },
   {
     title: "MaxGram",
     tags: ["Web", "React", "Express", "MongoDB"],
+    image: portfolioImage,
     description: "Clone of a certain social media made using MERN stack",
   },
   {
     title: "Architectural 3D Scenes",
     tags: ["3D"],
+    image: portfolioImage,
     description:
       "A collection of 3D scenes I created for a client working on a short film.",
-    image: { cafeImage },
   },
   {
     title: "My 3D Portfolio",
     tags: ["3D"],
+    image: portfolioImage,
     description: "My 3D graphics portfolio",
-    image: { cafeImage },
   },
   {
+    image: portfolioImage,
     description:
       "An artificial intellegence model that can beat the first few levels of Genisis Sonic",
     title: "Sonic AI",
-    image: { sonicImage },
     tags: ["Python"],
   },
   {
     title: "PomoMagic",
     tags: ["Web", "React"],
+    image: portfolioImage,
     description:
       "A lightweight, interactive and customizable tomato timer website",
   },
   {
     title: "URL Shortener",
     tags: ["Web", "Express"],
+    image: portfolioImage,
     description:
       "A convienent URL shortener built using NodeJS, Express, and mySQL",
   },
   {
     title: "Quote Generator",
     tags: ["Web"],
+    image: portfolioImage,
     description:
       "A stylish and lightweight meaningful quote generator built with vanilla JavaScript and CSS",
   },
   {
     title: "Conways Game of Life",
     tags: ["C"],
+    image: portfolioImage,
     description: "Cellular automaton written in C with NCURSES",
   },
   {
     title: "PCB Business Cards",
     tags: ["C", "Systems"],
+    image: portfolioImage,
     description:
       "A printed circuit board with a microcontroller and LED display, doubling as a business card!",
   },
   {
     title: "C Compiler",
     tags: ["C", "Systems", "Assembly"],
+    image: portfolioImage,
     description: "My own implementation of C",
   },
   {
     title: "ZabarkaOS",
     tags: ["C", "Systems", "Assembly"],
-    description: "A learning project 32-bit barebones operating system"
-  }
+    image: portfolioImage,
+    description: "A learning project 32-bit barebones operating system",
+  },
 ];
 
 const Cards = (props) => {
