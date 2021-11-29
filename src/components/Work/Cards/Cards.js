@@ -38,7 +38,7 @@ const CARD_DATA = [
     tags: ["Web", "React"],
     image: portfolioImage,
     description:
-      "A high performance and responsive website made using React to create an enriching and animated user experience",
+      "A high performance and responsive website made using React. The same one you're using right now!",
     demo:"https://maxzabarka.github.io/portfolio/",
     github:"https://github.com/maxzabarka/portfolio"
   },

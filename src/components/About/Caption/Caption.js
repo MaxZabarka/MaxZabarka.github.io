@@ -6,7 +6,7 @@ const Caption = () => {
     <div className="Caption">
       <div>
         <h1>
-          I build & design <span className="purple">digital products</span>
+          I design & build <span className="purple">digital products</span>
         </h1>
       </div>
     </div>

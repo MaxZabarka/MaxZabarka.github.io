@@ -1,6 +1,28 @@
+
 # Max Zabarka Portfolio
-Self explanatory ^
 
-Tech used:
+## Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+https://maxzabarka.github.io/portfolio/
+
+## Tech Stack
+
+- React
+- Create React App
+- EmailJS
+- Swiper
+- SCSS
+
+
+## Run Locally
+
+```bash
+  git clone https://github.com/MaxZabarka/portfolio
+  cd my-project
+  npm install
+  npm start
+```
+
+## Acknowledgements
+Icons made by [inkubators](https://www.flaticon.com/authors/inkubators) from [flaticon](https://www.flaticon.com/) 
+    

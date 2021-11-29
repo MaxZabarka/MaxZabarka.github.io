@@ -10,7 +10,7 @@ const Work = () => {
       <h1>
         <span className="purple">Work</span>
       </h1>
-      <p>A list of projects I have built for work or on my personal time</p>
+      <p>A selection of my most impressive projects that I have built for work or on my personal time</p>
       <CardFilter
         onSelectedTagsChange={(newTags) => {
           setSelectedTags(newTags)

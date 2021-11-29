@@ -80,10 +80,8 @@ const AboutBody = () => {
       </h2>
       <p>
         I pride myself on my ability to understand how the technologies we use
-        work under the hood. I don't believe in black boxes. I regularly create
-        implementations or read source of the technologies I use. It's why I've
-        written my own compiler, operating system, version control system,
-        JavaScript framework, and more. I strongly believe, in
+        work under the hood. I don't believe in black boxes. I regularly read source or create
+        implementations the technologies I use. I strongly believe, in
         general, knowing how things work under the hood makes you better at
         anything you choose to do.
       </p>
