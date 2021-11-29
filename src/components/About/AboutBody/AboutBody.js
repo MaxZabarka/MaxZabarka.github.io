@@ -50,6 +50,8 @@ const AboutBody = () => {
             <li>• Express</li>
             <li>• MongoDB</li>
             <li>• Arduino</li>
+            <li>• Blender</li>
+            <li>• Photoshop</li>
           </ul>
         </div>
         <div>
