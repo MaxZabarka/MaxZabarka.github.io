@@ -4,6 +4,9 @@ import "./Cards.scss";
 import sonicImage from "./Images/sonic.png";
 import portfolioImage from "./Images/portfolio.png";
 import cafeImage from "./Images/cafe.jpeg";
+import chessImage from "./Images/chess.jpg";
+import tomatoImage from "./Images/tomatoes.jpg";
+
 import FlipMove from "react-flip-move";
 
 // projects
@@ -38,15 +41,9 @@ const CARD_DATA = [
     tags: ["Web", "React"],
     image: portfolioImage,
     description:
-      "A high performance and responsive website made using React. The same one you're using right now!",
-    demo:"https://maxzabarka.github.io/portfolio/",
-    github:"https://github.com/maxzabarka/portfolio"
-  },
-  {
-    title: "Rebbit",
-    tags: ["Web", "Express", "MongoDB"],
-    image: portfolioImage,
-    description: "Clone of a certain website made with server-side rendering",
+      "A high performance and responsive website. The same one you're using right now!",
+    demo: "https://maxzabarka.github.io/portfolio/",
+    github: "https://github.com/maxzabarka/portfolio",
   },
   {
     title: "MaxGram",
@@ -57,36 +54,38 @@ const CARD_DATA = [
   {
     title: "Architectural 3D Scenes",
     tags: ["3D"],
-    image: portfolioImage,
+    image: cafeImage,
     description:
       "A collection of 3D scenes I created for a client working on a short film.",
   },
   {
     title: "My 3D Portfolio",
     tags: ["3D"],
-    image: portfolioImage,
+    image: chessImage,
     description: "My 3D graphics portfolio",
+    demo: "https://www.artstation.com/maxzabarka",
   },
   {
-    image: portfolioImage,
+    image: sonicImage,
     description:
-      "An artificial intellegence model that can beat the first few levels of Genisis Sonic",
+      "An artificial intellegence model that can beat the first few levels of Genesis Sonic",
     title: "Sonic AI",
     tags: ["Python"],
   },
   {
     title: "PomoMagic",
     tags: ["Web", "React"],
-    image: portfolioImage,
+    image: tomatoImage,
     description:
       "A lightweight, interactive and customizable tomato timer website",
+    demo: "https://maxzabarka.github.io/tomato-timer/",
+    github: "https://github.com/MaxZabarka/tomato-timer",
   },
   {
     title: "URL Shortener",
     tags: ["Web", "Express"],
     image: portfolioImage,
-    description:
-      "A convienent URL shortener built using NodeJS, Express, and mySQL",
+    description: "A URL shortener built using NodeJS, Express, and mySQL",
   },
   {
     title: "Quote Generator",
@@ -115,7 +114,7 @@ const CARD_DATA = [
     description: "My own implementation of C",
   },
   {
-    title: "ZabarkaOS",
+    title: "FooBarOS",
     tags: ["C", "Systems", "Assembly"],
     image: portfolioImage,
     description: "A learning project 32-bit barebones operating system",
