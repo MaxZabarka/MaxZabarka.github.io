@@ -14,8 +14,8 @@ const AboutBody = () => {
         I am passionate about making beautiful and functional products that
         improve the lives of those around me. I have skills and experience in
         web development, 3D design, low-level systems, and various other kinds
-        of software development. I’m also an athlete, photographer, advisor,
-        leader, and more.
+        of software development. I’m also an athlete, photographer, bilingual,
+        coach, and more.
       </p>
       <p>
         I don't only define myself by the skills I have or the technologies I

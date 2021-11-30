@@ -7,7 +7,7 @@ const Card = forwardRef((props, ref) => {
     <div ref={ref} className="Card">
       <div className="content-wrapper">
         <div className="content">
-          <img alt="" src={props.image} />
+          <img style={props.imageStyle} alt="" src={props.image} />
           <h1>{props.title}</h1>
           <ul>
             {props.tags.map((element) => {

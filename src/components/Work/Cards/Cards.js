@@ -6,6 +6,8 @@ import portfolioImage from "./Images/portfolio.png";
 import cafeImage from "./Images/cafe.jpeg";
 import chessImage from "./Images/chess.jpg";
 import tomatoImage from "./Images/tomatoes.jpg";
+import quoteImage from "./Images/quote.png";
+import urlShortenImage from "./Images/url-shorten.png"
 
 import FlipMove from "react-flip-move";
 
@@ -64,6 +66,7 @@ const CARD_DATA = [
     image: chessImage,
     description: "My 3D graphics portfolio",
     demo: "https://www.artstation.com/maxzabarka",
+    imageStyle: { objectPosition: "left center" },
   },
   {
     image: sonicImage,
@@ -71,6 +74,8 @@ const CARD_DATA = [
       "An artificial intellegence model that can beat the first few levels of Genesis Sonic",
     title: "Sonic AI",
     tags: ["Python"],
+    github: "https://github.com/MaxZabarka/sonic-ai",
+    demo: "https://youtube.com/playlist?list=PLjRTfz_QoVL82TWcXYOuzYuZ-KBN-ah8r",
   },
   {
     title: "PomoMagic",
@@ -84,15 +89,19 @@ const CARD_DATA = [
   {
     title: "URL Shortener",
     tags: ["Web", "Express"],
-    image: portfolioImage,
+    image: urlShortenImage,
     description: "A URL shortener built using NodeJS, Express, and mySQL",
+    github:"https://github.com/MaxZabarka/url-shortener",
+    demo:"https://zabarka-url-shortener.herokuapp.com/ "
   },
   {
     title: "Quote Generator",
     tags: ["Web"],
-    image: portfolioImage,
+    image: quoteImage,
     description:
       "A stylish and lightweight meaningful quote generator built with vanilla JavaScript and CSS",
+    demo: "https://maxzabarka.github.io/random-quote-generator/",
+    github: "https://github.com/MaxZabarka/random-quote-generator/",
   },
   {
     title: "Conways Game of Life",
