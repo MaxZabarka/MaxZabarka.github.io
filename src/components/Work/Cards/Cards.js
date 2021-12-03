@@ -7,7 +7,9 @@ import cafeImage from "./Images/cafe.jpeg";
 import chessImage from "./Images/chess.jpg";
 import tomatoImage from "./Images/tomatoes.jpg";
 import quoteImage from "./Images/quote.png";
-import urlShortenImage from "./Images/url-shorten.png"
+import urlShortenImage from "./Images/url-shorten.png";
+import cgolImage from "./Images/cgol.png";
+import pcbImage from "./Images/pcb2.png";
 
 import FlipMove from "react-flip-move";
 
@@ -45,13 +47,77 @@ const CARD_DATA = [
     description:
       "A high performance and responsive website. The same one you're using right now!",
     demo: "https://maxzabarka.github.io/portfolio/",
-    github: "https://github.com/maxzabarka/portfolio",
+    github: "https://github.com/maxzabarka/",
   },
   {
     title: "MaxGram",
     tags: ["Web", "React", "Express", "MongoDB"],
     image: portfolioImage,
     description: "Clone of a certain social media made using MERN stack",
+  },
+  {
+    image: sonicImage,
+    description:
+      "An artificial intellegence model that can beat the first few levels of Genesis Sonic",
+    title: "Sonic AI",
+    tags: ["Python"],
+    github: "https://github.com/MaxZabarka/sonic-ai",
+    demo: "https://youtube.com/playlist?list=PLjRTfz_QoVL82TWcXYOuzYuZ-KBN-ah8r",
+  },
+  {
+    title: "FooBarOS",
+    tags: ["C", "Systems", "Assembly"],
+    image: portfolioImage,
+    description: "A learning project 32-bit barebones operating system",
+  },
+
+  {
+    title: "Conways Game of Life",
+    tags: ["C"],
+    image: cgolImage,
+    description: "Cellular automaton written in C",
+    github: "https://github.com/MaxZabarka/c-conways-game-of-life",
+  },
+  {
+    title: "PCB Business Cards",
+    tags: ["C", "Systems"],
+    image: pcbImage,
+    github: "https://github.com/MaxZabarka/pcb-cards",
+    description:
+      "A printed circuit board with a microcontroller and LED display. Plays games like snake, breakout, pong, all while being the size of a business card.",
+  },
+  // {
+  //   title: "C Compiler",
+  //   tags: ["C", "Systems", "Assembly"],
+  //   image: portfolioImage,
+  //   description: "My own implementation of C",
+  // },
+
+  {
+    title: "PomoMagic",
+    tags: ["Web", "React"],
+    image: tomatoImage,
+    description:
+      "A lightweight, interactive and customizable tomato timer website",
+    demo: "https://maxzabarka.github.io/tomato-timer/",
+    github: "https://github.com/MaxZabarka/tomato-timer",
+  },
+  {
+    title: "URL Shortener",
+    tags: ["Web", "Express"],
+    image: urlShortenImage,
+    description: "A URL shortener built using NodeJS, Express, and mySQL",
+    github: "https://github.com/MaxZabarka/url-shortener",
+    demo: "https://zabarka-url-shortener.herokuapp.com/ ",
+  },
+  {
+    title: "Quote Generator",
+    tags: ["Web"],
+    image: quoteImage,
+    description:
+      "A stylish and lightweight meaningful quote generator built with vanilla JavaScript and CSS",
+    demo: "https://maxzabarka.github.io/random-quote-generator/",
+    github: "https://github.com/MaxZabarka/random-quote-generator/",
   },
   {
     title: "Architectural 3D Scenes",
@@ -67,66 +133,6 @@ const CARD_DATA = [
     description: "My 3D graphics portfolio",
     demo: "https://www.artstation.com/maxzabarka",
     imageStyle: { objectPosition: "left center" },
-  },
-  {
-    image: sonicImage,
-    description:
-      "An artificial intellegence model that can beat the first few levels of Genesis Sonic",
-    title: "Sonic AI",
-    tags: ["Python"],
-    github: "https://github.com/MaxZabarka/sonic-ai",
-    demo: "https://youtube.com/playlist?list=PLjRTfz_QoVL82TWcXYOuzYuZ-KBN-ah8r",
-  },
-  {
-    title: "PomoMagic",
-    tags: ["Web", "React"],
-    image: tomatoImage,
-    description:
-      "A lightweight, interactive and customizable tomato timer website",
-    demo: "https://maxzabarka.github.io/tomato-timer/",
-    github: "https://github.com/MaxZabarka/tomato-timer",
-  },
-  {
-    title: "URL Shortener",
-    tags: ["Web", "Express"],
-    image: urlShortenImage,
-    description: "A URL shortener built using NodeJS, Express, and mySQL",
-    github:"https://github.com/MaxZabarka/url-shortener",
-    demo:"https://zabarka-url-shortener.herokuapp.com/ "
-  },
-  {
-    title: "Quote Generator",
-    tags: ["Web"],
-    image: quoteImage,
-    description:
-      "A stylish and lightweight meaningful quote generator built with vanilla JavaScript and CSS",
-    demo: "https://maxzabarka.github.io/random-quote-generator/",
-    github: "https://github.com/MaxZabarka/random-quote-generator/",
-  },
-  {
-    title: "Conways Game of Life",
-    tags: ["C"],
-    image: portfolioImage,
-    description: "Cellular automaton written in C with NCURSES",
-  },
-  {
-    title: "PCB Business Cards",
-    tags: ["C", "Systems"],
-    image: portfolioImage,
-    description:
-      "A printed circuit board with a microcontroller and LED display, doubling as a business card!",
-  },
-  {
-    title: "C Compiler",
-    tags: ["C", "Systems", "Assembly"],
-    image: portfolioImage,
-    description: "My own implementation of C",
-  },
-  {
-    title: "FooBarOS",
-    tags: ["C", "Systems", "Assembly"],
-    image: portfolioImage,
-    description: "A learning project 32-bit barebones operating system",
   },
 ];
 

@@ -15,17 +15,7 @@ const Navbar = (props) => {
   }, [openMenu]);
   return (
     <>
-      <div
-        style={
-          props.darken
-            ? {
-                background:
-                  "linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
-              }
-            : {}
-        }
-        className="Navbar"
-      >
+      <div className="Navbar">
         {/* We have to put margin: clamp in here, because the minifier messes it up when we put in css file */}
         {/* it has to be 0px and not just 0 */}
         <div style={{ margin: "clamp(0px, 5%, 2.5rem)" }} className="nav-item">
@@ -39,6 +29,7 @@ const Navbar = (props) => {
             }}
           />
         </div>
+        <div className="darken" style={props.darken ? { opacity: "1" } : {}} />
       </div>
       <Menu
         onClose={() => {
