@@ -56,6 +56,14 @@ const CARD_DATA = [
     description: "Clone of a certain social media made using MERN stack",
   },
   {
+    title: "PCB Business Cards",
+    tags: ["C", "Systems"],
+    image: pcbImage,
+    github: "https://github.com/MaxZabarka/pcb-cards",
+    description:
+      "A printed circuit board with a microcontroller and LED display. Plays games like snake, breakout, pong, all while being the size of a business card.",
+  },
+  {
     image: sonicImage,
     description:
       "An artificial intellegence model that can beat the first few levels of Genesis Sonic",
@@ -71,21 +79,8 @@ const CARD_DATA = [
     description: "A learning project 32-bit barebones operating system",
   },
 
-  {
-    title: "Conways Game of Life",
-    tags: ["C"],
-    image: cgolImage,
-    description: "Cellular automaton written in C",
-    github: "https://github.com/MaxZabarka/c-conways-game-of-life",
-  },
-  {
-    title: "PCB Business Cards",
-    tags: ["C", "Systems"],
-    image: pcbImage,
-    github: "https://github.com/MaxZabarka/pcb-cards",
-    description:
-      "A printed circuit board with a microcontroller and LED display. Plays games like snake, breakout, pong, all while being the size of a business card.",
-  },
+
+
   // {
   //   title: "C Compiler",
   //   tags: ["C", "Systems", "Assembly"],
@@ -133,6 +128,13 @@ const CARD_DATA = [
     description: "My 3D graphics portfolio",
     demo: "https://www.artstation.com/maxzabarka",
     imageStyle: { objectPosition: "left center" },
+  },
+  {
+    title: "Conways Game of Life",
+    tags: ["C"],
+    image: cgolImage,
+    description: "Cellular automaton written in C",
+    github: "https://github.com/MaxZabarka/c-conways-game-of-life",
   },
 ];
 
