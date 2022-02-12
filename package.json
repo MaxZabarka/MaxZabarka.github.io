@@ -21,7 +21,7 @@
     "build": "rm docs -r; rm build -r; react-scripts build && mv build docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build && git add . && git commit -m 'deploy' && git push && echo 'DO NOT FORGET TO ADD THE CNAME IN GITHUB`'"
+    "deploy": "npm run build && echo 'max.zabarka.com' > docs/CNAME && git add . && git commit -m 'deploy' && git push && echo 'DO NOT FORGET TO ADD THE CNAME IN GITHUB`'"
   },
   "eslintConfig": {
     "extends": [
