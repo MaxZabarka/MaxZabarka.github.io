@@ -41,19 +41,21 @@ import FlipMove from "react-flip-move";
 
 const CARD_DATA = [
   {
+    title: "MaxGram",
+    tags: ["Web", "React", "Express", "MongoDB"],
+    image: portfolioImage,
+    description: "Clone of a certain social media made using MERN stack",
+    demo: "https://maxgram.zabarka.com",
+    github: "https://github.com/MaxZabarka/instagram-clone",
+  },
+  {
     title: "My Portfolio Website",
     tags: ["Web", "React"],
     image: portfolioImage,
     description:
       "A high performance and responsive website. The same one you're using right now!",
-    demo: "https://maxzabarka.github.io/portfolio/",
-    github: "https://github.com/maxzabarka/",
-  },
-  {
-    title: "MaxGram",
-    tags: ["Web", "React", "Express", "MongoDB"],
-    image: portfolioImage,
-    description: "Clone of a certain social media made using MERN stack",
+    demo: "https://max.zabarka.com",
+    github: "https://github.com/MaxZabarka/MaxZabarka.github.io/",
   },
   {
     title: "PCB Business Cards",
@@ -72,14 +74,12 @@ const CARD_DATA = [
     github: "https://github.com/MaxZabarka/sonic-ai",
     demo: "https://youtube.com/playlist?list=PLjRTfz_QoVL82TWcXYOuzYuZ-KBN-ah8r",
   },
-  {
-    title: "FooBarOS",
-    tags: ["C", "Systems", "Assembly"],
-    image: portfolioImage,
-    description: "A learning project 32-bit barebones operating system",
-  },
-
-
+  // {
+  //   title: "FooBarOS",
+  //   tags: ["C", "Systems", "Assembly"],
+  //   image: portfolioImage,
+  //   description: "A learning project 32-bit barebones operating system",
+  // },
 
   // {
   //   title: "C Compiler",
@@ -114,13 +114,13 @@ const CARD_DATA = [
     demo: "https://maxzabarka.github.io/random-quote-generator/",
     github: "https://github.com/MaxZabarka/random-quote-generator/",
   },
-  {
-    title: "Architectural 3D Scenes",
-    tags: ["3D"],
-    image: cafeImage,
-    description:
-      "A collection of 3D scenes I created for a client working on a short film.",
-  },
+  // {
+  //   title: "Architectural 3D Scenes",
+  //   tags: ["3D"],
+  //   image: cafeImage,
+  //   description:
+  //     "A collection of 3D scenes I created for a client working on a short film.",
+  // },
   {
     title: "My 3D Portfolio",
     tags: ["3D"],
