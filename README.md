@@ -3,7 +3,7 @@
 
 ## Demo
 
-https://maxzabarka.github.io/portfolio/
+https://max.zabarka.com
 
 ## Tech Stack
 
