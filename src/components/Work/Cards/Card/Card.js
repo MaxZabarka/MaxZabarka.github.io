@@ -6,7 +6,9 @@ const Card = forwardRef((props, ref) => {
   return (
     <div ref={ref} className="Card">
       <div className="content-wrapper">
-        <div className="content">
+      {props.footer ? <div className="footer">{props.footer}</div> : null}
+
+        <div className="content" style={props.footer ? {marginTop:"1.8rem" } : {}}>
           <img style={props.imageStyle} alt="" src={props.image} />
           <h1>{props.title}</h1>
           <ul>

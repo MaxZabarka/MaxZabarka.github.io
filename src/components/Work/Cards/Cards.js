@@ -3,15 +3,17 @@ import Card from "./Card/Card";
 import "./Cards.scss";
 import sonicImage from "./Images/sonic.png";
 import portfolioImage from "./Images/portfolio.png";
-import cafeImage from "./Images/cafe.jpeg";
+// import cafeImage from "./Images/cafe.jpeg";
 import chessImage from "./Images/chess.jpg";
 import tomatoImage from "./Images/tomatoes.jpg";
 import quoteImage from "./Images/quote.png";
 import urlShortenImage from "./Images/url-shorten.png";
 import cgolImage from "./Images/cgol.png";
 import pcbImage from "./Images/pcb2.png";
+import maxgramImage from "./Images/maxgram.png"
 
 import FlipMove from "react-flip-move";
+
 
 // projects
 // portfolio (Web, React)
@@ -43,10 +45,11 @@ const CARD_DATA = [
   {
     title: "MaxGram",
     tags: ["Web", "React", "Express", "MongoDB"],
-    image: portfolioImage,
+    image: maxgramImage,
     description: "Clone of a certain social media made using MERN stack",
     demo: "https://maxgram.zabarka.com",
     github: "https://github.com/MaxZabarka/instagram-clone",
+    // footer:<>🏆 Featured on <a target="_blank" href="https://github.com/GorvGoyl/Clone-Wars" rel="noopener noreferrer">Clone-Wars</a> 🏆</> 
   },
   {
     title: "My Portfolio Website",

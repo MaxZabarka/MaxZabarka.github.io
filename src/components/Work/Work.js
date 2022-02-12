@@ -23,7 +23,7 @@ const Work = () => {
           "Express",
           "MongoDB",
           "C",
-          "Assembly",
+          // "Assembly",
           "Python",
         ]}
       />
