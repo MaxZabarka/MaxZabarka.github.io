@@ -150,6 +150,9 @@ body {
 
 //   }
 // }
+.slide-active {
+  transition: 1s ease filter;
+}
 .blur {
   filter: blur(18px);
 }

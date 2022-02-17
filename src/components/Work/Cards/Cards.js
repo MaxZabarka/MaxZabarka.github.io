@@ -10,10 +10,9 @@ import quoteImage from "./Images/quote.png";
 import urlShortenImage from "./Images/url-shorten.png";
 import cgolImage from "./Images/cgol.png";
 import pcbImage from "./Images/pcb2.png";
-import maxgramImage from "./Images/maxgram.png"
+import maxgramImage from "./Images/maxgram.png";
 
 import FlipMove from "react-flip-move";
-
 
 // projects
 // portfolio (Web, React)
@@ -49,7 +48,7 @@ const CARD_DATA = [
     description: "Clone of a certain social media made using MERN stack",
     demo: "https://maxgram.zabarka.com",
     github: "https://github.com/MaxZabarka/instagram-clone",
-    // footer:<>🏆 Featured on <a target="_blank" href="https://github.com/GorvGoyl/Clone-Wars" rel="noopener noreferrer">Clone-Wars</a> 🏆</> 
+    // footer:<>🏆 Featured on <a target="_blank" href="https://github.com/GorvGoyl/Clone-Wars" rel="noopener noreferrer">Clone-Wars</a> 🏆</>
   },
   {
     title: "My Portfolio Website",
@@ -142,24 +141,27 @@ const CARD_DATA = [
 ];
 
 const Cards = (props) => {
+  const cards = CARD_DATA.map((card) => {
+    let shouldRender = false;
+    for (const tag of card.tags) {
+      shouldRender = props.selectedTags.has(tag);
+      if (props.selectedTags.has(tag) === true) {
+        break;
+      }
+    }
+    if (shouldRender) {
+      return <Card key={card.title} {...card} />;
+    } else {
+      return null;
+    }
+  });
   return (
     <div className="Cards">
-      <FlipMove className="grid">
-        {CARD_DATA.map((card) => {
-          let shouldRender = false;
-          for (const tag of card.tags) {
-            shouldRender = props.selectedTags.has(tag);
-            if (props.selectedTags.has(tag) === true) {
-              break;
-            }
-          }
-          if (shouldRender) {
-            return <Card key={card.title} {...card} />;
-          } else {
-            return null;
-          }
-        })}
-      </FlipMove>
+      {props.showFlip ? (
+        <FlipMove className="grid">{cards}</FlipMove>
+      ) : (
+        <div className="grid">{cards}</div>
+      )}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import CardFilter from "./Cards/CardFilter/CardFilter";
 import Cards from "./Cards/Cards";
 import "./Work.scss";
 
-const Work = () => {
+const Work = (props) => {
   const [selectedTags, setSelectedTags] = useState(new Set())
   return (
     <div className="Work">
@@ -27,7 +27,7 @@ const Work = () => {
           "Python",
         ]}
       />
-      <Cards selectedTags={selectedTags} />
+      <Cards showFlip={props.showFlip} selectedTags={selectedTags} />
     </div>
   );
 };

@@ -21,11 +21,14 @@ $backgroundDarkness: 0.8;
   // background-position: center;
   // background-repeat: no-repeat;
   // background-size: cover;
-  clip-path: inset(50% 50% 50% 50%);
-  animation: 0.7s cubic-bezier(0, 0.85, 0.38, 0.99) 0.5s animateIn forwards,
-    gradient 15s ease infinite;
+  animation: gradient 15s ease infinite;
 }
 
+.Home.animate {
+  clip-path: inset(50% 50% 50% 50%) ;
+  animation: 0.7s cubic-bezier(0, 0.85, 0.38, 0.99) 0.5s animateIn  forwards,
+    gradient 15s ease infinite;
+}
 @keyframes animateIn {
   0% {
     clip-path: inset(50% 50% 50% 50%);

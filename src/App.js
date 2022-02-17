@@ -13,6 +13,7 @@ import Work from "./components/Work/Work";
 import Contact from "./components/Contact/Contact";
 
 import "./components/Shared/PaintHover.scss";
+import Cube from "./components/Cube/Cube";
 const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 // install Swiper modules
@@ -24,87 +25,115 @@ SwiperCore.use([EffectCube, Parallax]);
 // Show and hide navbar depending on scroll up or down
 // Make navbar background black when on second slide
 // Add scroll in transitions
+window.secondSlide = document.createEvent("Event");
+window.secondSlide.initEvent("secondslide", true, true);
+
+window.firstSlide = document.createEvent("Event");
+window.firstSlide.initEvent("firstslide", true, true);
 
 const speed = 2500;
-
 function App() {
-  const [swiper, setSwiper] = useState(null);
   const [darkenNavbar, setDarkenNavbar] = useState(false);
-  useEffect(() => {
-    if (swiper) {
-      const swiperContainer = document.querySelector(".swiper-container");
-      // swiperContainer.classList.add("swiper-container-animate");
-
-      swiper.on("slideChangeTransitionStart", () => {
-        swiperContainer.classList.add("swiper-container-animate");
-        setTimeout(() => {
-          swiperContainer.classList.remove("swiper-container-animate");
-          if (swiper.realIndex === 1) {
-            setDarkenNavbar(true);
-          }
-        }, speed);
-      });
-    }
-  }, [swiper]);
-
+  const [showFlip, setShowFlip] = useState(true);
+  const [showNavbar, setShowNavbar] = useState(true)
+  window.addEventListener(
+    "secondslide",
+    () => {
+      setDarkenNavbar(true);
+    },
+    false
+  );
+  window.addEventListener(
+    "firstslide",
+    () => {
+      setDarkenNavbar(false);
+    },
+    false
+  );
   return (
     <div className="App">
       <Navbar
+      show={showNavbar}
         onNavigate={(section) => {
-          if (!swiper) return;
           if (section === "Home") {
-            swiper.slidePrev(speed);
+            if (window.slide === 1) {
+              document
+                .querySelector(".About")
+                .scrollIntoView({behavior:"smooth"});
+                setTimeout(() => {
+                  window.dispatchEvent(window.firstSlide);
+                }, 800)
+            } else {
+              window.dispatchEvent(window.firstSlide);
+            }
+            // swiper.slidePrev(speed);
           } else {
-            swiper.slideNext();
-            document
+            if (window.slide === 1) {
+              document
+                .querySelector("." + section)
+                .scrollIntoView({ behavior: "smooth" });
+              return;
+            }
+            window.dispatchEvent(window.secondSlide);
+            setTimeout(() => {
+              document
               .querySelector("." + section)
               .scrollIntoView({ behavior: "smooth" });
+            }, 2600)
+            // swiper.slideNext();
+            // document
+            //   .querySelector("." + section)
+            //   .scrollIntoView();
           }
         }}
         darken={darkenNavbar}
       />
-      <Swiper
-        onSlideChange={(swiper) => {
-          if (swiper.realIndex === 0) {
-            setDarkenNavbar(false);
-          }
-          console.log("swiper.realIndex :>> ", swiper.realIndex);
-          for (const slide of document.querySelectorAll(".swiper-slide")) {
-            slide.scrollTo(0, 0);
-          }
-        }}
-        speed={speed}
-        allowTouchMove={false}
-        parallax={!isSafari}
-        onSwiper={setSwiper}
-        direction="vertical"
-        cubeEffect={{
-          shadow: false,
-          slideShadows: false,
-        }}
-        effect={isSafari ? null : "cube"}
-      >
-        <SwiperSlide>
+      {/* <Cube
+        componentOne={
           <Home
             next={() => {
-              if (swiper) {
-                swiper.slideNext(speed);
-              }
+              // if (swiper) {
+              //   swiper.slideNext(speed);
+              // }
             }}
             previous={() => {
-              if (swiper) {
-                swiper.slidePrev(speed);
-              }
+              // if (swiper) {
+              //   swiper.slidePrev(speed);
+              // }
             }}
-            swiper={swiper}
+            // swiper={swiper}
           />
-        </SwiperSlide>
-        <SwiperSlide>
-          <About />
-          <Work />
-          <Contact />
-        </SwiperSlide>
-      </Swiper>
+        }
+        componentTwo={
+          <div style={{height:"100%", overflow:"auto"}}>
+            <About />
+            <Work />
+            <Contact />
+          </div>
+        }
+      /> */}
+      <Cube
+        onFirstSlide={() => {
+          setShowFlip(false);
+        }}
+        onSecondSlide={() => {
+          setShowFlip(true);
+        }}
+        startTransition={() => {
+          setShowNavbar(false)
+        }}
+        endTransition={() => {
+          setShowNavbar(true)
+        }}
+        componentOne={<Home />}
+        componentTwo={
+          <>
+            <About />
+            <Work showFlip={showFlip} />
+            <Contact />
+          </>
+        }
+      />
     </div>
   );
 }

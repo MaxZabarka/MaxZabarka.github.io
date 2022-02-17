@@ -8,17 +8,43 @@ const Navbar = (props) => {
 
   useEffect(() => {
     if (openMenu) {
-      document.querySelector(".swiper-container").classList.add("blur");
+      (
+        document.querySelector(".Cube") ||
+        document.querySelector(".slide-active")
+      ).classList.add("blur");
     } else {
-      document.querySelector(".swiper-container").classList.remove("blur");
+      (
+        document.querySelector(".Cube") ||
+        document.querySelector(".slide-active")
+      ).classList.remove("blur");
+
+      // document.querySelector(".swiper-container").classList.remove("blur");
     }
   }, [openMenu]);
   return (
     <>
-      <div className="Navbar">
+      <div
+        className={"Navbar " + (props.show ? "" : "hide")}
+        
+      >
         {/* We have to put margin: clamp in here, because the minifier messes it up when we put in css file */}
         {/* it has to be 0px and not just 0 */}
-        <div style={{ margin: "clamp(0px, 5%, 2.5rem)" }} className="nav-item">
+        <div
+          style={{ margin: "clamp(0px, 5%, 2.5rem)" }}
+          onClick={() => {
+            if (window.slide === 1) {
+              document
+                .querySelector(".About")
+                .scrollIntoView({ behavior: "smooth" });
+              setTimeout(() => {
+                window.dispatchEvent(window.firstSlide);
+              }, 800);
+            } else {
+              window.dispatchEvent(window.firstSlide);
+            }
+          }}
+          className="nav-item"
+        >
           <h1 className="name paint-hover">zabarka</h1>
         </div>
         <div style={{ margin: "clamp(0px, 5%, 2.5rem)" }} className="nav-item">

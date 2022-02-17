@@ -15,6 +15,9 @@
   }
 
   h1 {
+    // fixes bug on safari
+    transform: translateZ(0px);
+    
     letter-spacing: 2px;
     .first,
     .last {
@@ -46,9 +49,11 @@
 }
 @keyframes dropIn {
   0% {
-    transform: rotateX(90deg) rotateY(0deg);
+    transform: rotateX(90deg) ;
+    // transform: scale(0);
   }
   100% {
-    transform: rotateX(0deg) rotateY(0deg);
+    transform: rotateX(0deg);
+    // transform: scale(1);
   }
 }

@@ -15,12 +15,13 @@
     display: flex;
   }
   p {
+    text-align: center;
     a {
       color: white;
     }
     color: white;
     opacity: 0.5;
-    font-size: 0.9rem;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
     margin-bottom: 0.4rem;
   }
   margin-bottom: 1rem;
