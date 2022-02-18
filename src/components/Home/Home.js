@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef } from "react";
 import Title from "./Title/Title";
 import "./Home.scss";
 import ScrollButton from "./ScrollButton/ScrollButton";
@@ -12,7 +12,6 @@ const Home = (props) => {
    *  when the height is 100vh */
 
   const homeElement = useRef(null);
-  const [animate, setAnimate] = useState(true);
 
 
   return (
@@ -21,8 +20,6 @@ const Home = (props) => {
       ref={homeElement}
       className={"Home slide-active " + (window.animateHome ? "animate" : "")}
       onAnimationEnd={(e) => {
-        console.log("animate", animate);
-        console.log("e.target", e.target);
         window.animateHome = false;
       }}
     >

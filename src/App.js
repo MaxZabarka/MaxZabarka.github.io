@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { EffectCube, Parallax } from "swiper/core";
 import "swiper/components/effect-cube/effect-cube.min.css";
 import "swiper/swiper.min.css";
@@ -14,7 +13,6 @@ import Contact from "./components/Contact/Contact";
 
 import "./components/Shared/PaintHover.scss";
 import Cube from "./components/Cube/Cube";
-const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 // install Swiper modules
 SwiperCore.use([EffectCube, Parallax]);
@@ -31,7 +29,6 @@ window.secondSlide.initEvent("secondslide", true, true);
 window.firstSlide = document.createEvent("Event");
 window.firstSlide.initEvent("firstslide", true, true);
 
-const speed = 2500;
 function App() {
   const [darkenNavbar, setDarkenNavbar] = useState(false);
   const [showFlip, setShowFlip] = useState(true);

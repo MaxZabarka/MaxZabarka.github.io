@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import onWheel from "../../util/onWheel";
 import "./Cube.scss";
 window.slide = 0;

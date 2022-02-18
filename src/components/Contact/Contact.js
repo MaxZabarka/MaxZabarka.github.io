@@ -3,7 +3,7 @@ import Icon from "../Navigation/MenuContent/Icon/Icon";
 import "./Contact.scss";
 import Form from "./Form/Form";
 import gitHubIcon from "../../assets/Icons/github.svg";
-import instagramIcon from "../../assets/Icons/instagram.svg";
+// import instagramIcon from "../../assets/Icons/instagram.svg";
 import emailIcon from "../../assets/Icons/email.svg";
 import linkIcon from "../../assets/Icons/linkedin.svg";
 
@@ -26,11 +26,11 @@ const Contact = () => {
           image={gitHubIcon}
           alt="github-icon"
         />
-        <Icon
+        {/* <Icon
           link="https://www.instagram.com/max.zabarka/"
           image={instagramIcon}
           alt="instagram-icon"
-        />
+        /> */}
         <Icon
           link="https://www.linkedin.com/in/max-zabarka-0a739a1b6/"
           image={linkIcon}
