@@ -48,7 +48,7 @@ const CARD_DATA = [
     description: "Clone of a certain social media made using MERN stack",
     demo: "https://maxgram.zabarka.com",
     github: "https://github.com/MaxZabarka/instagram-clone",
-    // footer:<>🏆 Featured on <a target="_blank" href="https://github.com/GorvGoyl/Clone-Wars" rel="noopener noreferrer">Clone-Wars</a> 🏆</>
+    footer:<>🏆 Featured on <a target="_blank" href="https://github.com/GorvGoyl/Clone-Wars" rel="noopener noreferrer">Clone-Wars</a> 🏆</>
   },
   {
     title: "My Portfolio Website",

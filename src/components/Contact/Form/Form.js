@@ -30,7 +30,7 @@ const Form = () => {
             },
             (error) => {
               alert(
-                "Oh no! The contact form has failed. Try again or send me an email at maxim.zabarka@gmail.com"
+                "The contact form has failed! Try again or send me an email at maxim.zabarka@gmail.com"
               );
             }
           );
